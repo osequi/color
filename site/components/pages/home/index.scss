@@ -3,16 +3,13 @@ html {
     body {
       padding: $lem;
 
-      .main-colors {
-        @include main-colors;
+      .title--display {
+        display: flex;
+        @include text-style(title);
       }
 
-      .mix-colors--tint {
-        @include mix-colors($white, $blue, 'tint', 'blue');
-      }
-
-      .mix-colors--shade {
-        @include mix-colors($black, $blue, 'shade', 'blue');
+      .home__highlight-and-shade {
+        @include home__highlight-and-shade;
       }
     }
   }

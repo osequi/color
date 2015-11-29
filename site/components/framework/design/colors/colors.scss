@@ -7,13 +7,25 @@
 // Styleguide colors
 
 // Main color
+$blue: rgba(23, 88, 171, 1);
+
+// Highlight color
 $white: #fffafa;
 
-// Main color
+// Shading color
 $black: #000;
 
-// Main color
-$blue: rgba(23, 88, 171, 1);
+// Highlight color
+$whiteB: rgba(255, 245, 228, 1);
+
+// Shading color
+$blackB: rgba(76, 46, 90, 1);
+
+// Highlight color
+$whiteC: rgb(255,142,189);
+
+// Shading color
+$blackC: rgb(31,39,37);
 
 
 // Color combinations. Colors are not used standalone but in pairs
@@ -35,6 +47,10 @@ $blue: rgba(23, 88, 171, 1);
 
 // Color classes
 
+.blue {
+  background: rgba(23, 88, 171, 1);
+};
+
 .white {
   background: #fffafa;
 };
@@ -43,8 +59,20 @@ $blue: rgba(23, 88, 171, 1);
   background: #000;
 };
 
-.blue {
-  background: rgba(23, 88, 171, 1);
+.whiteB {
+  background: rgba(255, 245, 228, 1);
+};
+
+.blackB {
+  background: rgba(76, 46, 90, 1);
+};
+
+.whiteC {
+  background: rgb(255,142,189);
+};
+
+.blackC {
+  background: rgb(31,39,37);
 };
 
 

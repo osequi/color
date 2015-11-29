@@ -4,6 +4,5 @@
 
   .color-swatch {
     @include color-swatch('.white');
-    margin-right: $lem;
   }
 }

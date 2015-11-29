@@ -1,20 +1,54 @@
 {
   "title": "Home",
-  "colors": [
-    {
-      "name": "white",
-      "value": "#fffafa",
-      "description": "Main color"
-    },
-    {
-      "name": "black",
-      "value": "#000",
-      "description": "Main color"
-    },
+  "colorsA": [
     {
       "name": "blue",
       "value": "rgba(23, 88, 171, 1)",
       "description": "Main color"
+    },
+    {
+      "name": "white",
+      "value": "#fffafa",
+      "description": "Highlight color"
+    },
+    {
+      "name": "black",
+      "value": "#000",
+      "description": "Shading color"
+    }
+  ],
+  "colorsB": [
+    {
+      "name": "blue",
+      "value": "rgba(23, 88, 171, 1)",
+      "description": "Main color"
+    },
+    {
+      "name": "whiteB",
+      "value": "rgba(255, 245, 228, 1)",
+      "description": "Highlight color"
+    },
+    {
+      "name": "blackB",
+      "value": "rgba(76, 46, 90, 1)",
+      "description": "Shading color"
+    }
+  ],
+  "colorsC": [
+    {
+      "name": "blue",
+      "value": "rgba(23, 88, 171, 1)",
+      "description": "Main color"
+    },
+    {
+      "name": "whiteC",
+      "value": "rgb(255,142,189)",
+      "description": "Highlight color"
+    },
+    {
+      "name": "blackC",
+      "value": "rgb(31,39,37)",
+      "description": "Shading color"
     }
   ]
 }
