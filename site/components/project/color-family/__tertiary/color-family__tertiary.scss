@@ -14,6 +14,38 @@
 
   .#{$colorname1}-#{$colorname3}-#{$colorname2} {
     $c: mix($color3, $color2, 50%);
+    background-color: mix($color1, $c, 50%);
+  }
+
+
+  .#{$colorname2}-#{$colorname1}-#{$colorname2} {
+    $c: mix($color1, $color2, 50%);
+    background-color: mix($color2, $c, 50%);
+  }
+
+  .#{$colorname2}-#{$colorname1}-#{$colorname3} {
+    $c: mix($color1, $color3, 50%);
+    background-color: mix($color2, $c, 50%);
+  }
+
+  .#{$colorname2}-#{$colorname3}-#{$colorname2} {
+    $c: mix($color3, $color2, 50%);
+    background-color: mix($color2, $c, 50%);
+  }
+
+
+  .#{$colorname3}-#{$colorname1}-#{$colorname2} {
+    $c: mix($color1, $color2, 50%);
+    background-color: mix($color3, $c, 50%);
+  }
+
+  .#{$colorname3}-#{$colorname1}-#{$colorname3} {
+    $c: mix($color1, $color3, 50%);
+    background-color: mix($color3, $c, 50%);
+  }
+
+  .#{$colorname3}-#{$colorname3}-#{$colorname2} {
+    $c: mix($color3, $color2, 50%);
     background-color: mix($color3, $c, 50%);
   }
 }
