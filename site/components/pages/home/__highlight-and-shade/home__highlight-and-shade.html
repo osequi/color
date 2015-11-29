@@ -11,6 +11,11 @@
       uses a main color and a highlight and shading color to create a gradient palette
       by transitioning the main color to the highlight and shading colors.
     </p>
+
+    <p>
+      It's puncte forte is the usage of the mix() SASS mixin instead of the lighten() and darken() to offer
+      a better, uniform transition.
+    </p>
   </div>
 
   <div class="example example1">
