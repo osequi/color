@@ -8,6 +8,11 @@ html {
         @include text-style(title);
       }
 
+      .text {
+        @include text-style(body-text);
+        padding: $lem;
+      }
+
       .home__highlight-and-shade {
         @include home__highlight-and-shade;
       }
