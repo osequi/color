@@ -1,15 +1,31 @@
-@mixin color-family($color1, $color2, $color3, $colorname1, $colorname2, $colorname3) {
+@mixin color-family($color1, $color2, $color3, $colorname1, $colorname2, $colorname3, $size) {
+  display: flex;
+  flex-wrap: wrap;
+
+  position: relative;
 
   .color-swatch--rectangle {
-    @include color-swatch--rectangle;
-    margin-right: $lem;
+    display: flex;
+
+    position: relative;
+    width: $size;
+    height: $size;
+
+    .placeholder {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__primary {
+    @include color-family__primary($size);
   }
 
   &__secondary {
-    @include color-family__secondary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3);
+    @include color-family__secondary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3, $size);
   }
 
   &__tertiary {
-    @include color-family__tertiary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3);
+    @include color-family__tertiary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3, $size);
   }
 }

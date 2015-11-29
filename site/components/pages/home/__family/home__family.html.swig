@@ -8,35 +8,15 @@
 
 
   <div class="example example1">
-    {% set colors = colorsA %}
-    {% include '../../../project/main-colors/main-colors.html.swig' %}
-
-    {% set title = 'secondary' %}
-    {% include '../../../project/color-family/color-family.html.swig' %}
-
-    {% set title = 'tertiary' %}
-    {% include '../../../project/color-family/color-family.html.swig' %}
-  </div>
-
-  <div class="example example2">
-    {% set colors = colorsB %}
-    {% include '../../../project/main-colors/main-colors.html.swig' %}
-
-    {% set title = 'secondary' %}
-    {% include '../../../project/color-family/color-family.html.swig' %}
-
-    {% set title = 'tertiary' %}
-    {% include '../../../project/color-family/color-family.html.swig' %}
-  </div>
-
-  <div class="example example3">
     {% set colors = colorsC %}
-    {% include '../../../project/main-colors/main-colors.html.swig' %}
+
+    {% set title = 'primary' %}
+    {% include '../../../project/color-family/__primary/color-family__primary.html.swig' %}
 
     {% set title = 'secondary' %}
-    {% include '../../../project/color-family/color-family.html.swig' %}
+    {% include '../../../project/color-family/__secondary/color-family__secondary.html.swig' %}
 
     {% set title = 'tertiary' %}
-    {% include '../../../project/color-family/color-family.html.swig' %}
+    {% include '../../../project/color-family/__tertiary/color-family__tertiary.html.swig' %}
   </div>
 </section>

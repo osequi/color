@@ -1,19 +1,26 @@
 @mixin home__family {
+  $size: 5em;
+
+  .example {
+    position: relative;
+    margin: $size + $size / 2 0 0 $size / 2;
+  }
+
   .example1 {
     .color-family {
-      @include color-family($blue, $white, $black, 'blue', 'white', 'black');
+      @include color-family($blue, $whiteC, $blackC, 'blue', 'whiteC', 'blackC', $size);
     }
   }
 
   .example2 {
     .color-family {
-      @include color-family($blue, $whiteB, $blackB, 'blue', 'whiteB', 'blackB');
+      @include color-family($blue, $whiteB, $blackB, 'blue', 'whiteB', 'blackB', $size);
     }
   }
 
   .example3 {
     .color-family {
-      @include color-family($blue, $whiteC, $blackC, 'blue', 'whiteC', 'blackC');
+      @include color-family($blue, $whiteC, $blackC, 'blue', 'whiteC', 'blackC', $size);
     }
   }
 }

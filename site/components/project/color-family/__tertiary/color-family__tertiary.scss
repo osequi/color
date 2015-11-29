@@ -1,6 +1,15 @@
-@mixin color-family__tertiary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3) {
+@mixin color-family__tertiary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3, $size) {
   display: flex;
   flex-wrap: wrap;
+
+  .color-swatch--rectangle {
+    z-index: -1;
+    
+    &:nth-of-type(1) {
+      top: -$size - $size / 2 - $size / 4;
+      left: - $size / 2;
+    }
+  }
 
   .#{$colorname1}-#{$colorname1}-#{$colorname2} {
     $c: mix($color1, $color2, 50%);
