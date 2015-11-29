@@ -1,9 +1,11 @@
-@mixin circle($radius: $lem * 2, $color-scheme: white-on-black) {
+@mixin circle($radius: $lem * 2, $color-scheme: none) {
   width: $radius;
   height: $radius;
   border-radius: $radius;
 
-  @include colors($color-scheme);
+  @if ($color-scheme != none) {
+    @include colors($color-scheme);
+  }
 
   display: flex;
   justify-content: center;

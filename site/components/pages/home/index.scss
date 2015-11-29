@@ -1,7 +1,11 @@
 html {
   &.home {
     body {
+      padding: $lem;
       
+      .main-colors {
+        @include main-colors;
+      }
     }
   }
 }

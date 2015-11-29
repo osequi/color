@@ -12,45 +12,12 @@ $white: #fffafa;
 // Main color
 $black: #000;
 
-// Secondary color
-$gray: #999;
-
-// Secondary color
-$lightgray: #f1f1f1;
-
-// main color
-$blue: #3361AF;
-
-// main color
-$green: rgb(165,184,74);
+// Main color
+$blue: rgba(23, 88, 171, 1);
 
 
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
-
-  @if ($name == 'black-on-white') {
-    color: $black;
-    background-color: $white;
-    
-  }
-
-  @if ($name == 'blue-on-white') {
-    color: $blue;
-    background-color: $white;
-    
-  }
-
-  @if ($name == 'gray-on-white') {
-    color: $gray;
-    background-color: $white;
-    
-  }
-
-  @if ($name == 'white-on-blue') {
-    color: $white;
-    background-color: $blue;
-    
-  }
 
   @if ($name == 'white-on-black') {
     color: $white;
@@ -58,21 +25,9 @@ $green: rgb(165,184,74);
     
   }
 
-  @if ($name == 'white-on-transparent') {
-    color: $white;
-    background-color: transparent;
-    
-  }
-
-  @if ($name == 'black-on-green') {
+  @if ($name == 'black-on-white') {
     color: $black;
-    background-color: $green;
-    
-  }
-
-  @if ($name == 'gray-on-lightgray') {
-    color: $gray;
-    background-color: $lightgray;
+    background-color: $white;
     
   }
 
@@ -88,48 +43,12 @@ $green: rgb(165,184,74);
   background: #000;
 };
 
-.gray {
-  background: #999;
-};
-
-.lightgray {
-  background: #f1f1f1;
-};
-
 .blue {
-  background: #3361AF;
-};
-
-.green {
-  background: rgb(165,184,74);
+  background: rgba(23, 88, 171, 1);
 };
 
 
 // Color pair classes
-
-.black-on-white {
-  color: $black;
-  background-color: $white;
-  
-}
-
-.blue-on-white {
-  color: $blue;
-  background-color: $white;
-  
-}
-
-.gray-on-white {
-  color: $gray;
-  background-color: $white;
-  
-}
-
-.white-on-blue {
-  color: $white;
-  background-color: $blue;
-  
-}
 
 .white-on-black {
   color: $white;
@@ -137,21 +56,9 @@ $green: rgb(165,184,74);
   
 }
 
-.white-on-transparent {
-  color: $white;
-  background-color: transparent;
-  
-}
-
-.black-on-green {
+.black-on-white {
   color: $black;
-  background-color: $green;
-  
-}
-
-.gray-on-lightgray {
-  color: $gray;
-  background-color: $lightgray;
+  background-color: $white;
   
 }
 

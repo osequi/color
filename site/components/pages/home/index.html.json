@@ -1,3 +1,20 @@
 {
-  "title": "Home"
+  "title": "Home",
+  "colors": [
+    {
+      "name": "white",
+      "value": "#fffafa",
+      "description": "Main color"
+    },
+    {
+      "name": "black",
+      "value": "#000",
+      "description": "Main color"
+    },
+    {
+      "name": "blue",
+      "value": "rgba(23, 88, 171, 1)",
+      "description": "Main color"
+    }
+  ]
 }
