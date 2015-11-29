@@ -3,8 +3,28 @@ html {
     body {
       padding: $lem;
 
+      .home__highlight-and-shade,
+      .home__family,
+      .home__hierarchy,
+      .home__warm-and-cool {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .figure,
+        .examples {
+          @include landscape {
+            margin-left: 10%;
+            max-width: calc(100% - 10% - 25em);
+          }
+        }
+      }
+
+
       .title--display {
         display: flex;
+        flex-basis: 100%;
+
         @include text-style(title);
         margin: $lem 0;
       }
@@ -22,23 +42,8 @@ html {
         @include main-colors;
       }
 
-      .home__hierarchy,
-      .home__warm-and-cool {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-
-        .title--display {
-          flex-basis: 100%;
-        }
-
-        .figure {
-          @include figure($loading: false);
-
-          @include landscape {
-            margin-left: 10%;
-          }
-        }
+      .figure {
+        @include figure($loading: false);
       }
 
       .home__highlight-and-shade {

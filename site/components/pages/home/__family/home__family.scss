@@ -8,7 +8,7 @@
 
   .example1 {
     .color-family {
-      @include color-family($blue, $whiteC, $blackC, 'blue', 'whiteC', 'blackC', $size);
+      @include color-family($blue, $white, $black, 'blue', 'white', 'black', $size);
     }
   }
 

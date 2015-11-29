@@ -18,39 +18,41 @@
     </p>
   </div>
 
-  <div class="example example1">
-    {% set colors = colorsA %}
-    {% include '../../../project/main-colors/main-colors.html.swig' %}
+  <div class="examples">
+    <div class="example example1">
+      {% set colors = colorsA %}
+      {% include '../../../project/main-colors/main-colors.html.swig' %}
 
-    {% set color = colorsA[0] %}
-    {% set title = 'tint' %}
-    {% include '../../../project/mix-colors/mix-colors.html.swig' %}
+      {% set color = colorsA[0] %}
+      {% set title = 'tint' %}
+      {% include '../../../project/mix-colors/mix-colors.html.swig' %}
 
-    {% set title = 'shade' %}
-    {% include '../../../project/mix-colors/mix-colors.html.swig' %}
-  </div>
+      {% set title = 'shade' %}
+      {% include '../../../project/mix-colors/mix-colors.html.swig' %}
+    </div>
 
-  <div class="example example2">
-    {% set colors = colorsB %}
-    {% include '../../../project/main-colors/main-colors.html.swig' %}
+    <div class="example example2">
+      {% set colors = colorsB %}
+      {% include '../../../project/main-colors/main-colors.html.swig' %}
 
-    {% set color = colorsB[0] %}
-    {% set title = 'tint' %}
-    {% include '../../../project/mix-colors/mix-colors.html.swig' %}
+      {% set color = colorsB[0] %}
+      {% set title = 'tint' %}
+      {% include '../../../project/mix-colors/mix-colors.html.swig' %}
 
-    {% set title = 'shade' %}
-    {% include '../../../project/mix-colors/mix-colors.html.swig' %}
-  </div>
+      {% set title = 'shade' %}
+      {% include '../../../project/mix-colors/mix-colors.html.swig' %}
+    </div>
 
-  <div class="example example3">
-    {% set colors = colorsC %}
-    {% include '../../../project/main-colors/main-colors.html.swig' %}
+    <div class="example example3">
+      {% set colors = colorsC %}
+      {% include '../../../project/main-colors/main-colors.html.swig' %}
 
-    {% set color = colorsC[0] %}
-    {% set title = 'tint' %}
-    {% include '../../../project/mix-colors/mix-colors.html.swig' %}
+      {% set color = colorsC[0] %}
+      {% set title = 'tint' %}
+      {% include '../../../project/mix-colors/mix-colors.html.swig' %}
 
-    {% set title = 'shade' %}
-    {% include '../../../project/mix-colors/mix-colors.html.swig' %}
+      {% set title = 'shade' %}
+      {% include '../../../project/mix-colors/mix-colors.html.swig' %}
+    </div>
   </div>
 </section>
