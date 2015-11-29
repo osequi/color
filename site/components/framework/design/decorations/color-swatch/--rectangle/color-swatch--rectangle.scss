@@ -1,0 +1,10 @@
+@mixin color-swatch--rectangle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  .placeholder {
+    width: $lem * 5;
+    height: $lem * 2;
+  }
+}
