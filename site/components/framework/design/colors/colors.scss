@@ -1,0 +1,157 @@
+// Colors
+//
+// The colors together with the color pairs.
+// Colors don't exist alone yet in pairs, like black on white.
+// All color pairs have a contrast ratio set for perfect readability using [Lea Verou's contrast checking tool](http://leaverou.github.io/contrast-ratio/).
+//
+// Styleguide colors
+
+// Main color
+$white: #fffafa;
+
+// Main color
+$black: #000;
+
+// Secondary color
+$gray: #999;
+
+// Secondary color
+$lightgray: #f1f1f1;
+
+// main color
+$blue: #3361AF;
+
+// main color
+$green: rgb(165,184,74);
+
+
+// Color combinations. Colors are not used standalone but in pairs
+@mixin colors($name) {
+
+  @if ($name == 'black-on-white') {
+    color: $black;
+    background-color: $white;
+    
+  }
+
+  @if ($name == 'blue-on-white') {
+    color: $blue;
+    background-color: $white;
+    
+  }
+
+  @if ($name == 'gray-on-white') {
+    color: $gray;
+    background-color: $white;
+    
+  }
+
+  @if ($name == 'white-on-blue') {
+    color: $white;
+    background-color: $blue;
+    
+  }
+
+  @if ($name == 'white-on-black') {
+    color: $white;
+    background-color: $black;
+    
+  }
+
+  @if ($name == 'white-on-transparent') {
+    color: $white;
+    background-color: transparent;
+    
+  }
+
+  @if ($name == 'black-on-green') {
+    color: $black;
+    background-color: $green;
+    
+  }
+
+  @if ($name == 'gray-on-lightgray') {
+    color: $gray;
+    background-color: $lightgray;
+    
+  }
+
+}
+
+// Color classes
+
+.white {
+  background: #fffafa;
+};
+
+.black {
+  background: #000;
+};
+
+.gray {
+  background: #999;
+};
+
+.lightgray {
+  background: #f1f1f1;
+};
+
+.blue {
+  background: #3361AF;
+};
+
+.green {
+  background: rgb(165,184,74);
+};
+
+
+// Color pair classes
+
+.black-on-white {
+  color: $black;
+  background-color: $white;
+  
+}
+
+.blue-on-white {
+  color: $blue;
+  background-color: $white;
+  
+}
+
+.gray-on-white {
+  color: $gray;
+  background-color: $white;
+  
+}
+
+.white-on-blue {
+  color: $white;
+  background-color: $blue;
+  
+}
+
+.white-on-black {
+  color: $white;
+  background-color: $black;
+  
+}
+
+.white-on-transparent {
+  color: $white;
+  background-color: transparent;
+  
+}
+
+.black-on-green {
+  color: $black;
+  background-color: $green;
+  
+}
+
+.gray-on-lightgray {
+  color: $gray;
+  background-color: $lightgray;
+  
+}
+

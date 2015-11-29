@@ -1,0 +1,13 @@
+{
+  "url": "/",
+  "urlx": "http://metamn.io/color/",
+  "title": "Color",
+  "images": "assets/images/",
+  "videos": "assets/videos/",
+  "javascripts": {
+    "header": [
+    ],
+    "footer": [
+    ]
+  }
+}
