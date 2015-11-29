@@ -20,4 +20,6 @@
       Vivid colors are&mdash;only and only&mdash;to bring in the mood.
     </p>
   </div>
+
+  {% include '../../../framework/structure/figure/figure.html.swig' %}
 </section>

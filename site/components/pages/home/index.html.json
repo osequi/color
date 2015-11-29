@@ -1,5 +1,17 @@
 {
   "title": "Home",
+  "images": [
+    {
+      "title": "Grayscale hierarchy",
+      "name": "editorial-wire-bw",
+      "extension": ".gif"
+    },
+    {
+      "title": "Color hierarchy",
+      "name": "albert-wire",
+      "extension": ".gif"
+    }
+  ],
   "colorsA": [
     {
       "name": "blue",

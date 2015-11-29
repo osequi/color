@@ -6,11 +6,30 @@ html {
       .title--display {
         display: flex;
         @include text-style(title);
+        margin: $lem 0;
       }
 
       .text {
         @include text-style(body-text);
-        padding: $lem;
+      }
+
+      .home__hierarchy,
+      .home__warm-and-cool {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .title--display {
+          flex-basis: 100%;
+        }
+
+        .figure {
+          @include figure($loading: false);
+
+          @include landscape {
+            margin-left: 10%;
+          }
+        }
       }
 
       .home__highlight-and-shade {

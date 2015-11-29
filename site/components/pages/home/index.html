@@ -23,6 +23,8 @@
 
 
 
+
+  
   <section class="home__hierarchy">
   <h3 class="title--display">Hierarchy</h3>
 
@@ -45,14 +47,78 @@
       Vivid colors are&mdash;only and only&mdash;to bring in the mood.
     </p>
   </div>
+
+  
+
+
+
+
+<figure class="figure">
+  
+
+  <!-- The default extension is .png but other formats are handled too -->
+  
+  
+    
+  
+
+  <!-- If 'onesize' is set all images will have the same size -->
+  
+    <!-- Naming convention for responsive images -->
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  <!-- Showing different images for different devices -->
+  
+
+
+  <!-- Figcaption is image title unless is not set explicitely -->
+  
+  
+
+  
+
+
+  <!-- Images are served from /site also for /styleguide -->
+  
+  
+
+
+  <picture class="picture">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source media="(min-width: 1600px)" srcset="/assets/images/editorial-wire-bw_desktop.gif, /assets/images/editorial-wire-bw_desktop2x.gif 2x">
+    <source media="(min-width: 1024px)" srcset="/assets/images/editorial-wire-bw_laptop.gif, /assets/images/editorial-wire-bw_laptop2x.gif 2x">
+    <source media="(min-width: 600px)" srcset="/assets/images/editorial-wire-bw_tablet.gif, /assets/images/editorial-wire-bw_tablet2x.gif 2x">
+    <source media="(max-width: 599px)" srcset="/assets/images/editorial-wire-bw_mobile.gif, /assets/images/editorial-wire-bw_mobile2x.gif 2x">
+    <!--[if IE 9]></video><![endif]-->
+    <!-- to make it work with imagesLoaded the 'srcset' is replaced by a standard fallback 'src' -->
+    <img class="img" src="/assets/images/editorial-wire-bw_laptop.gif"  alt="Grayscale hierarchy">
+  </picture>
+
+  <figcaption class="figcaption figcaption--from-title">
+    Grayscale hierarchy
+  </figcaption>
+
+
+</figure>
+
 </section>
 
+
+  
   <section class="home__warm-and-cool">
   <h3 class="title--display">Warm and cool</h3>
 
   <div class="text">
     <p>
-      By the most simple classification colors are either warm&mdash;active or cool&mdash;chill. 
+      By the most simple classification colors are either warm&mdash;active or cool&mdash;chill.
       They are either highlighting or shading something.
     </p>
 
@@ -64,7 +130,70 @@
       Cool colors are used for backgrounds, warm colors are used for important content.
     </p>
   </div>
+
+  
+
+
+
+
+<figure class="figure">
+  
+
+  <!-- The default extension is .png but other formats are handled too -->
+  
+  
+    
+  
+
+  <!-- If 'onesize' is set all images will have the same size -->
+  
+    <!-- Naming convention for responsive images -->
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  <!-- Showing different images for different devices -->
+  
+
+
+  <!-- Figcaption is image title unless is not set explicitely -->
+  
+  
+
+  
+
+
+  <!-- Images are served from /site also for /styleguide -->
+  
+  
+
+
+  <picture class="picture">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source media="(min-width: 1600px)" srcset="/assets/images/albert-wire_desktop.gif, /assets/images/albert-wire_desktop2x.gif 2x">
+    <source media="(min-width: 1024px)" srcset="/assets/images/albert-wire_laptop.gif, /assets/images/albert-wire_laptop2x.gif 2x">
+    <source media="(min-width: 600px)" srcset="/assets/images/albert-wire_tablet.gif, /assets/images/albert-wire_tablet2x.gif 2x">
+    <source media="(max-width: 599px)" srcset="/assets/images/albert-wire_mobile.gif, /assets/images/albert-wire_mobile2x.gif 2x">
+    <!--[if IE 9]></video><![endif]-->
+    <!-- to make it work with imagesLoaded the 'srcset' is replaced by a standard fallback 'src' -->
+    <img class="img" src="/assets/images/albert-wire_laptop.gif"  alt="Color hierarchy">
+  </picture>
+
+  <figcaption class="figcaption figcaption--from-title">
+    Color hierarchy
+  </figcaption>
+
+
+</figure>
+
 </section>
+
 
   <section class="home__highlight-and-shade">
   <h3 class="title--display">Highlight and shade</h3>

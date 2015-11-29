@@ -3,7 +3,7 @@
 
   <div class="text">
     <p>
-      By the most simple classification colors are either warm&mdash;active or cool&mdash;chill. 
+      By the most simple classification colors are either warm&mdash;active or cool&mdash;chill.
       They are either highlighting or shading something.
     </p>
 
@@ -14,5 +14,11 @@
     <p>
       Cool colors are used for backgrounds, warm colors are used for important content.
     </p>
+
+    <p>
+      Cool colors are blue, green, violet. Warm colors are red, orange, yellow.
+    </p>
   </div>
+
+  {% include '../../../framework/structure/figure/figure.html.swig' %}
 </section>
