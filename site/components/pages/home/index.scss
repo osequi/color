@@ -13,6 +13,15 @@ html {
         @include text-style(body-text);
       }
 
+      .text,
+      .example {
+        margin: $lem 0;
+      }
+
+      .main-colors {
+        @include main-colors;
+      }
+
       .home__hierarchy,
       .home__warm-and-cool {
         display: flex;
@@ -34,6 +43,10 @@ html {
 
       .home__highlight-and-shade {
         @include home__highlight-and-shade;
+      }
+
+      .home__family {
+        @include home__family;
       }
     }
   }

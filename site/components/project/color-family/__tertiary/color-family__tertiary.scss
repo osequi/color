@@ -1,0 +1,19 @@
+@mixin color-family__tertiary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3) {
+  display: flex;
+  flex-wrap: wrap;
+
+  .#{$colorname1}-#{$colorname1}-#{$colorname2} {
+    $c: mix($color1, $color2, 50%);
+    background-color: mix($color1, $c, 50%);
+  }
+
+  .#{$colorname1}-#{$colorname1}-#{$colorname3} {
+    $c: mix($color1, $color3, 50%);
+    background-color: mix($color1, $c, 50%);
+  }
+
+  .#{$colorname1}-#{$colorname3}-#{$colorname2} {
+    $c: mix($color3, $color2, 50%);
+    background-color: mix($color3, $c, 50%);
+  }
+}

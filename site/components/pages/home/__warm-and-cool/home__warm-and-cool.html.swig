@@ -3,7 +3,7 @@
 
   <div class="text">
     <p>
-      By the most simple classification colors are either warm&mdash;active or cool&mdash;chill.
+      By the most simple classification colors are either warm&mdash;active&mdash;light or cool&mdash;chill&mdash;dark.
       They are either highlighting or shading something.
     </p>
 

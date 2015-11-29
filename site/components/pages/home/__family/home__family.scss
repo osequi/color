@@ -1,0 +1,19 @@
+@mixin home__family {
+  .example1 {
+    .color-family {
+      @include color-family($blue, $white, $black, 'blue', 'white', 'black');
+    }
+  }
+
+  .example2 {
+    .color-family {
+      @include color-family($blue, $whiteB, $blackB, 'blue', 'whiteB', 'blackB');
+    }
+  }
+
+  .example3 {
+    .color-family {
+      @include color-family($blue, $whiteC, $blackC, 'blue', 'whiteC', 'blackC');
+    }
+  }
+}

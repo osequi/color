@@ -1,0 +1,16 @@
+@mixin color-family__secondary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3) {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .#{$colorname1}-#{$colorname2} {
+    background-color: mix($color1, $color2, 50%);
+  }
+
+  .#{$colorname1}-#{$colorname3} {
+    background-color: mix($color1, $color3, 50%);
+  }
+
+  .#{$colorname3}-#{$colorname2} {
+    background-color: mix($color3, $color2, 50%);
+  }
+}

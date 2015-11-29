@@ -1,6 +1,7 @@
 {% extends '../../project/templates/default/default.html.swig' %}
 {% block content %}
 
+  {% include '__family/home__family.html.swig' %}
 
   {% set image = images[0] %}
   {% include '__hierarchy/home__hierarchy.html.swig' %}

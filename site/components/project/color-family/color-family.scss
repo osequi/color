@@ -1,0 +1,15 @@
+@mixin color-family($color1, $color2, $color3, $colorname1, $colorname2, $colorname3) {
+
+  .color-swatch--rectangle {
+    @include color-swatch--rectangle;
+    margin-right: $lem;
+  }
+
+  &__secondary {
+    @include color-family__secondary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3);
+  }
+
+  &__tertiary {
+    @include color-family__tertiary($color1, $color2, $color3, $colorname1, $colorname2, $colorname3);
+  }
+}

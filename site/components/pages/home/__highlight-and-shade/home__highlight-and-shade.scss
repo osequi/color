@@ -1,13 +1,4 @@
 @mixin home__highlight-and-shade {
-  .text,
-  .example {
-    margin: $lem 0;
-  }
-
-  .main-colors {
-    @include main-colors;
-  }
-
   .example1 {
     .mix-colors--tint {
       @include mix-colors($white, $blue, 'tint', 'blue');

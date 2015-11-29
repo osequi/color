@@ -7,7 +7,7 @@
     </p>
 
     <p>
-      Once a color is added on another color they become engaged in a relationship. They interact.
+      Once a color is paired with another color they differ; they become engaged in a relationship. They interact.
     </p>
 
     <p>
@@ -18,6 +18,10 @@
     <p>
       Hierarchy exists on a monochromatic composition too; we don't have to add vivid colors to differentiate.
       Vivid colors are&mdash;only and only&mdash;to bring in the mood.
+    </p>
+
+    <p>
+      Source: <a href="https://robots.thoughtbot.com/Its-only-color">It's Only Color</a>
     </p>
   </div>
 
