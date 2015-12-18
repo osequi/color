@@ -1,0 +1,50 @@
+@mixin color-circle($circle_size, $nr_of_colors) {
+  @include color-circle__slice($circle_size);
+
+  position: relative;
+  overflow: hidden;
+  width: $circle_size;
+  height: $circle_size;
+
+  .colors {
+    @include color-circle__slice($circle_size);
+
+    position: relative;
+    filter: blur(1.7em);
+    transform: scale(1.35);
+
+    .color {
+      @include color-circle__slice($circle_size);
+      clip: rect(0, $circle_size, $circle_size, #{$circle_size / 2});
+
+      &:after {
+        @include color-circle__slice($circle_size);
+        clip: rect(0, #{$circle_size / 2}, $circle_size, 0);
+      }
+
+      &:nth-child(n + #{$nr_of_colors + 1}) {
+        @include color-circle__slice($circle_size);
+        clip: rect(0, #{$circle_size / 2}, $circle_size, 0);
+
+        &:after {
+          clip: rect(0, $circle_size, $circle_size, #{$circle_size / 2});
+        }
+      }
+
+      $slice_size: 360 / $nr_of_colors;
+
+      @for $i from 0 to $nr_of_colors {
+        &:nth-child(#{1+$i}):after {
+          background-color: red;
+
+          @if $i < ($nr_of_colors / 2) {
+            transform: rotate(#{$slice_size*(1+$i)}deg);
+            z-index: #{$nr_of_colors - $i};
+          } @else {
+            transform: rotate(#{-$slice_size+($slice_size*(1+$i))}deg);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,38 +1,13 @@
 {
   "colors": [
     {
-      "name": "blue",
-      "value": "rgb(69,119,192)",
-      "description": "Main color"
-    },
-    {
       "name": "white",
-      "value": "rgb(233,216,210)",
+      "value": "#fff",
       "description": "Highlight color"
     },
     {
       "name": "black",
-      "value": "rgb(72,108,102)",
-      "description": "Shading color"
-    },
-    {
-      "name": "whiteB",
-      "value": "rgba(255, 245, 228, 1)",
-      "description": "Highlight color"
-    },
-    {
-      "name": "blackB",
-      "value": "rgba(76, 46, 90, 1)",
-      "description": "Shading color"
-    },
-    {
-      "name": "whiteC",
-      "value": "rgb(255,142,189)",
-      "description": "Highlight color"
-    },
-    {
-      "name": "blackC",
-      "value": "rgb(31,39,37)",
+      "value": "#000",
       "description": "Shading color"
     }
   ],

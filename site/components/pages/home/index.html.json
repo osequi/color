@@ -1,3 +1,6 @@
 {
-  "title": "Home"
+  "title": "Home",
+  "colors": [
+    "red", "blue", "yellow"
+  ]
 }

@@ -1,7 +1,9 @@
 html {
   &.home {
     body {
-      
+      .color-wheel {
+        @include color-wheel;
+      }
     }
   }
 }
