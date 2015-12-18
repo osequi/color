@@ -31,8 +31,13 @@
         }
       }
 
+      // For circles with just 3 colors
+      &:nth-child(2) {
+        clip: rect(0, $circle_size, $circle_size, 0);
+      }
+
       $slice_size: 360 / $nr_of_colors;
-      $colors: (blue, yellow, red, brown);
+      $colors: (blue, yellow, red);
 
       @for $i from 0 to length($colors) {
         &:nth-child(#{1+$i}):after {
