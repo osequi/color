@@ -1,8 +1,0 @@
-@mixin main-colors {
-  display: flex;
-  flex-wrap: wrap;
-
-  .color-swatch {
-    @include color-swatch('.white');
-  }
-}
