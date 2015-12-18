@@ -1,23 +1,16 @@
 // http://codepen.io/shankarcabus/pen/jcyDA
 
 @mixin color-wheel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
   &__circles {
+    position: relative;
 
-    $circle_size: $lem * 10;
-    $circle_size_growth: 4;
-
-    @for $i from 1 through 2 {
-      &:nth-child(#{$i}) {
-        $this_circle_size: ($i - 1) * $circle_size_growth + $circle_size;
-
-        @if ($i < 3) {
-          $this_number_of_colors: 3;
-        } @else {
-          $this_number_of_colors: ($i - 2) * 6;
-        }
-
-        @include color-circle($this_circle_size, $this_number_of_colors);
-      }
+    .color-circle {
+      @include color-circle;
     }
   }
 }

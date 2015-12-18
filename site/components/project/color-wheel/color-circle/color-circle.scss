@@ -1,56 +1,20 @@
-@mixin color-circle($circle_size, $nr_of_colors) {
-  @include color-circle__slice($circle_size);
+@mixin color-circle {
+  position: absolute;
 
-  position: relative;
-  overflow: hidden;
-  width: $circle_size;
-  height: $circle_size;
+  $circle_size: $lem * 10;
+  $circle_size_growth: 10;
 
-  .colors {
-    @include color-circle__slice($circle_size);
+  @for $i from 1 through 10 {
+    &:nth-of-type(#{$i}) {
+      $this_circle_size: ($i - 1) * $circle_size_growth + $circle_size;
 
-    position: relative;
-    //filter: blur(1.7em);
-    transform: scale(1.35);
-
-    .color {
-      @include color-circle__slice($circle_size);
-      clip: rect(0, $circle_size, $circle_size, #{$circle_size / 2});
-
-      &:after {
-        @include color-circle__slice($circle_size);
-        clip: rect(0, #{$circle_size / 2}, $circle_size, 0);
+      @if ($i < 3) {
+        $this_number_of_colors: 3;
+      } @else {
+        $this_number_of_colors: ($i - 2) * 6;
       }
 
-      &:nth-child(n + #{1 + round($nr_of_colors / 2)}) {
-        @include color-circle__slice($circle_size);
-        clip: rect(0, #{$circle_size / 2}, $circle_size, 0);
-
-        &:after {
-          clip: rect(0, $circle_size, $circle_size, #{$circle_size / 2});
-        }
-      }
-
-      // For circles with just 3 colors
-      &:nth-child(2) {
-        clip: rect(0, $circle_size, $circle_size, 0);
-      }
-
-      $slice_size: 360 / $nr_of_colors;
-      $colors: (blue, yellow, red);
-
-      @for $i from 0 to length($colors) {
-        &:nth-child(#{1+$i}):after {
-          background-color: nth($colors, $i+1);
-
-          @if $i < round($nr_of_colors / 2) {
-            transform: rotate(#{$slice_size*(1+$i)}deg);
-            z-index: #{length($colors)-$i};
-          } @else {
-            transform: rotate(#{-$slice_size+($slice_size*(1+$i))}deg);
-          }
-        }
-      }
+      @include color-circle__colors($this_circle_size, $this_number_of_colors, $i);
     }
   }
 }

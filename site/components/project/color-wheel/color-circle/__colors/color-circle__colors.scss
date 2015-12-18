@@ -1,0 +1,74 @@
+@mixin color-circle__colors($circle_size, $nr_of_colors, $index) {
+  @include color-circle__slice($circle_size);
+
+  overflow: hidden;
+  z-index:  #{1000 - $index};
+
+  // Rotate the secondary colors around the primary colors
+  &:nth-of-type(2) {
+    transform: rotate(60deg);
+  }
+
+  .colors {
+    @include color-circle__slice($circle_size);
+
+    position: relative;
+    //filter: blur(1.7em);
+    transform: scale(1.35);
+
+    .color {
+      @include color-circle__slice($circle_size);
+      clip: rect(0, $circle_size, $circle_size, #{$circle_size / 2});
+
+      &:after {
+        @include color-circle__slice($circle_size);
+        clip: rect(0, #{$circle_size / 2}, $circle_size, 0);
+      }
+
+      &:nth-child(n + #{1 + round($nr_of_colors / 2)}) {
+        @include color-circle__slice($circle_size);
+        clip: rect(0, #{$circle_size / 2}, $circle_size, 0);
+
+        &:after {
+          clip: rect(0, $circle_size, $circle_size, #{$circle_size / 2});
+        }
+      }
+
+      // For circles with just 3 colors
+      @if ($nr_of_colors == 3) {
+        &:nth-child(2) {
+          clip: rect(0, $circle_size, $circle_size, 0);
+        }
+      }
+
+      $slice_size: 360 / $nr_of_colors;
+
+      // Generate colors
+      @if ($index == 1) {
+        $colors: (blue, yellow, red);
+      }
+
+      @if ($index == 2) {
+        $colors: (green, orange, violet);
+      }
+
+      @if ($index > 2) {
+        $colors: (cyan, magenta, snow);
+      }
+
+
+      @for $i from 0 to length($colors) {
+        &:nth-child(#{1+$i}):after {
+          background-color: nth($colors, $i+1);
+
+          @if $i < round($nr_of_colors / 2) {
+            transform: rotate(#{$slice_size*(1+$i)}deg);
+            z-index: #{length($colors)-$i};
+          } @else {
+            transform: rotate(#{-$slice_size+($slice_size*(1+$i))}deg);
+          }
+        }
+      }
+    }
+  }
+}
