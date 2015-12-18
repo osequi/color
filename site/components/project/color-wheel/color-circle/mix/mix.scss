@@ -21,26 +21,39 @@
 
 
 // Returns an array of all combined colors from previous steps
+//
 @function color-mix-all-colors($colors, $index) {
-  @if ($index == 2) {
-    @return append($colors, nth($colors, 1));
-  } @else {
-    $new_colors: color-mix-new-colors(append($colors, nth($colors, 1)));
+  $all_colors: $colors;
 
-    $merge_colors: ();
-    @for $i from 1 to length($colors) + 1 {
-      $merge_colors: append($merge_colors, nth($colors, $i));
-      $merge_colors: append($merge_colors, nth($new_colors, $i));
-    }
+  @for $i from 2 to $index {
+    $new_colors: color-mix-new-colors(append($all_colors, nth($colors, 1)));
+    $all_colors: color-mix-merge-color-arrays($all_colors, $new_colors);
 
-    $merge_colors: append($merge_colors, nth($colors, 1));
-    @debug($merge_colors);
-    @return $merge_colors;
+    @debug($i);
+    @debug($all_colors);
   }
+
+  @return append($all_colors, nth($colors, 1));;
+}
+
+
+
+// Merging two arrays
+// - (b, y, r) + (g, o, v) => (b, g, y, o, r, v)
+@function color-mix-merge-color-arrays($array1, $array2) {
+  $merge_colors: ();
+
+  @for $i from 1 to length($array1) + 1 {
+    $merge_colors: append($merge_colors, nth($array1, $i));
+    $merge_colors: append($merge_colors, nth($array2, $i));
+  }
+
+  @return $merge_colors;
 }
 
 
 // Returns a new set of colors
+// - (b, y, r, b) => (b+y = g, y+r = o, r+b = v)
 @function color-mix-new-colors($colors) {
   $new_colors: ();
 

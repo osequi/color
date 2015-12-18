@@ -4,7 +4,7 @@
   $circle_size: $lem * 10;
   $circle_size_growth: 10;
 
-  @for $i from 1 through 3 {
+  @for $i from 1 through 4 {
     &:nth-of-type(#{$i}) {
       $this_circle_size: ($i - 1) * $circle_size_growth + $circle_size;
 
