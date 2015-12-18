@@ -1,32 +1,52 @@
+// Mixin colors
+// - DO NOT USE html color names; for example green is #080 instead of #0f0
+// - THERE IS a conflict between the RYB (CMYK) and RGB, so Green must be created by hand
+// - in RGB Blue + Yellow = Gray not Green
+// - http://stackoverflow.com/questions/4255973/calculation-of-a-mixed-color-in-rgb
+
 @function color-mix($index) {
   // blue, yellow, red
-  // - DO NOT USE html color names; for example green is #080 instead of #0f0
-  $primary: (#0000ff, #ffff00, #ff0000);
-
-  // green, orange, violet
-  // - http://stackoverflow.com/questions/4255973/calculation-of-a-mixed-color-in-rgb
-  // - blue + yellow != green == gray !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  // - as a workaround I've put green directly instead of blue+yellow
-  $secondary: (#00ff00, mix(nth($primary, 2), nth($primary, 3)), mix(nth($primary, 3), nth($primary, 1)));
+  $colors: (#0000ff, #ffff00, #ff0000);
 
   @if ($index == 1) {
-    @return $primary;
-  } @elseif ($index == 2) {
-    @return $secondary;
+    @return $colors;
   } @else {
-    @return color-mix-n-times($primary, $secondary, $index);
+    // Combine all colors into a new array
+    $colors: color-mix-all-colors($colors, $index);
+
+    // Generate new colors from the combined array
+    @return color-mix-new-colors($colors);
   }
 }
 
-@function color-mix-n-times($primary, $secondary, $index) {
-  $ret: ();
 
-  @for $i from 1 through length($primary) {
-    @for $j from 1 through length($secondary) {
-      $ret: append($ret, mix(nth($primary, $i), nth($secondary, $j)));
+// Returns an array of all combined colors from previous steps
+@function color-mix-all-colors($colors, $index) {
+  @if ($index == 2) {
+    @return append($colors, nth($colors, 1));
+  } @else {
+    $new_colors: color-mix-new-colors(append($colors, nth($colors, 1)));
+
+    $merge_colors: ();
+    @for $i from 1 to length($colors) + 1 {
+      $merge_colors: append($merge_colors, nth($colors, $i));
+      $merge_colors: append($merge_colors, nth($new_colors, $i));
     }
+
+    $merge_colors: append($merge_colors, nth($colors, 1));
+    @debug($merge_colors);
+    @return $merge_colors;
+  }
+}
+
+
+// Returns a new set of colors
+@function color-mix-new-colors($colors) {
+  $new_colors: ();
+
+  @for $i from 1 through length($colors) - 1 {
+    $new_colors: append($new_colors, mix(nth($colors, $i), nth($colors, $i + 1)));
   }
 
-  @return $ret;
+  @return $new_colors;
 }
