@@ -11,10 +11,26 @@
       @if ($i < 3) {
         $this_number_of_colors: 3;
       } @else {
-        $this_number_of_colors: ($i - 2) * 6;
+        $this_number_of_colors: 3 * pow(2, $i - 2);
       }
 
       @include color-circle__colors($this_circle_size, $this_number_of_colors, $i);
     }
   }
+}
+
+
+@function pow($number, $exp) {
+  $value: 1;
+  @if $exp > 0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  }
+  @else if $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+  @return $value;
 }
