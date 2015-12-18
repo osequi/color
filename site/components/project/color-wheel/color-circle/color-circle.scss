@@ -10,7 +10,7 @@
     @include color-circle__slice($circle_size);
 
     position: relative;
-    filter: blur(1.7em);
+    //filter: blur(1.7em);
     transform: scale(1.35);
 
     .color {
@@ -22,7 +22,7 @@
         clip: rect(0, #{$circle_size / 2}, $circle_size, 0);
       }
 
-      &:nth-child(n + #{$nr_of_colors + 1}) {
+      &:nth-child(n + #{1 + round($nr_of_colors / 2)}) {
         @include color-circle__slice($circle_size);
         clip: rect(0, #{$circle_size / 2}, $circle_size, 0);
 
@@ -32,14 +32,15 @@
       }
 
       $slice_size: 360 / $nr_of_colors;
+      $colors: (blue, yellow, red, brown);
 
-      @for $i from 0 to $nr_of_colors {
+      @for $i from 0 to length($colors) {
         &:nth-child(#{1+$i}):after {
-          background-color: red;
+          background-color: nth($colors, $i+1);
 
-          @if $i < ($nr_of_colors / 2) {
+          @if $i < round($nr_of_colors / 2) {
             transform: rotate(#{$slice_size*(1+$i)}deg);
-            z-index: #{$nr_of_colors - $i};
+            z-index: #{length($colors)-$i};
           } @else {
             transform: rotate(#{-$slice_size+($slice_size*(1+$i))}deg);
           }
