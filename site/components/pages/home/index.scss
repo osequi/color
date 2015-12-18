@@ -1,58 +1,7 @@
 html {
   &.home {
     body {
-      padding: $lem;
-
-      .home__highlight-and-shade,
-      .home__family,
-      .home__hierarchy,
-      .home__warm-and-cool {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-
-        .figure,
-        .examples {
-          @include landscape {
-            margin-left: 10%;
-            max-width: calc(100% - 10% - 25em);
-          }
-        }
-      }
-
-
-      .title--display {
-        display: flex;
-        flex-basis: 100%;
-
-        @include text-style(title);
-        margin: $lem 0;
-      }
-
-      .text {
-        @include text-style(body-text);
-      }
-
-      .text,
-      .example {
-        margin: $lem 0;
-      }
-
-      .main-colors {
-        @include main-colors;
-      }
-
-      .figure {
-        @include figure($loading: false);
-      }
-
-      .home__highlight-and-shade {
-        @include home__highlight-and-shade;
-      }
-
-      .home__family {
-        @include home__family;
-      }
+      
     }
   }
 }
