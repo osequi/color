@@ -1,11 +1,15 @@
 // Mixin colors
-// - DO NOT USE html color names; for example green is #080 instead of #0f0
-// - THERE IS a conflict between the RYB (CMYK) and RGB, so Green must be created by hand
-// - in RGB Blue + Yellow = Gray not Green
-// - http://stackoverflow.com/questions/4255973/calculation-of-a-mixed-color-in-rgb
+// A pretty calculated algorithm to create a color palette with n wheels
+// - the primaries are: (blue, yellow, red) or (b, y, r)
+// - 1. when a next level of colors is generated (ie secondaries) the blue is added to the end of the current colors: (b, y, r, b)
+// - 2. looping through this new array and adding consecutive values gives us (b+y, y+r, r+b) which is (g-reen, 0-range, v-iolet)
+// - for creating the tertiaries we merge the proevious two arrays: (b, g, y, o, r, v) and repeat 1.-2.
 
+
+// The main function
 @function color-mix($index) {
   // blue, yellow, red
+  // - DO NOT USE html color names; for example green is #080 instead of #0f0
   $colors: (#0000ff, #ffff00, #ff0000);
 
   @if ($index == 1) {
@@ -21,16 +25,13 @@
 
 
 // Returns an array of all combined colors from previous steps
-//
+// - the recursive function to merge previous color arrays into a new final one which generates the new color wheel
 @function color-mix-all-colors($colors, $index) {
   $all_colors: $colors;
 
   @for $i from 2 to $index {
     $new_colors: color-mix-new-colors(append($all_colors, nth($colors, 1)));
     $all_colors: color-mix-merge-color-arrays($all_colors, $new_colors);
-
-    @debug($i);
-    @debug($all_colors);
   }
 
   @return append($all_colors, nth($colors, 1));;
@@ -61,6 +62,9 @@
     $color1: nth($colors, $i);
     $color2: nth($colors, $i + 1);
 
+    // - THERE IS a conflict between the RYB (CMYK) and RGB, so Green must be created by hand
+    // - in RGB Blue + Yellow = Gray not Green
+    // - http://stackoverflow.com/questions/4255973/calculation-of-a-mixed-color-in-rgb
     @if (($color1 == #0000ff) and ($color2 == #ffff00)) {
       $mixed: #00ff00;
     } @else {
