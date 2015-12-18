@@ -1,0 +1,32 @@
+@function color-mix($index) {
+  // blue, yellow, red
+  // - DO NOT USE html color names; for example green is #080 instead of #0f0
+  $primary: (#0000ff, #ffff00, #ff0000);
+
+  // green, orange, violet
+  // - http://stackoverflow.com/questions/4255973/calculation-of-a-mixed-color-in-rgb
+  // - blue + yellow != green == gray !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  // - as a workaround I've put green directly instead of blue+yellow
+  $secondary: (#00ff00, mix(nth($primary, 2), nth($primary, 3)), mix(nth($primary, 3), nth($primary, 1)));
+
+  @if ($index == 1) {
+    @return $primary;
+  } @elseif ($index == 2) {
+    @return $secondary;
+  } @else {
+    @return color-mix-n-times($primary, $secondary, $index);
+  }
+}
+
+@function color-mix-n-times($primary, $secondary, $index) {
+  $ret: ();
+
+  @for $i from 1 through length($primary) {
+    @for $j from 1 through length($secondary) {
+      $ret: append($ret, mix(nth($primary, $i), nth($secondary, $j)));
+    }
+  }
+
+  @return $ret;
+}

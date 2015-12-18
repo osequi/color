@@ -9,6 +9,11 @@
     transform: rotate(60deg);
   }
 
+  // Rotate the tertiary colors
+  &:nth-of-type(3) {
+    transform: rotate(-60deg);
+  }
+
   .colors {
     @include color-circle__slice($circle_size);
 
@@ -44,17 +49,7 @@
       $slice_size: 360 / $nr_of_colors;
 
       // Generate colors
-      @if ($index == 1) {
-        $colors: (blue, yellow, red);
-      }
-
-      @if ($index == 2) {
-        $colors: (green, orange, violet);
-      }
-
-      @if ($index > 2) {
-        $colors: (cyan, magenta, snow);
-      }
+      $colors: color-mix($index);
 
 
       @for $i from 0 to length($colors) {
