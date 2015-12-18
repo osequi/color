@@ -58,7 +58,16 @@
   $new_colors: ();
 
   @for $i from 1 through length($colors) - 1 {
-    $new_colors: append($new_colors, mix(nth($colors, $i), nth($colors, $i + 1)));
+    $color1: nth($colors, $i);
+    $color2: nth($colors, $i + 1);
+
+    @if (($color1 == #0000ff) and ($color2 == #ffff00)) {
+      $mixed: #00ff00;
+    } @else {
+      $mixed: mix($color1, $color2);
+    }
+
+    $new_colors: append($new_colors, $mixed);
   }
 
   @return $new_colors;

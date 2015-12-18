@@ -1,10 +1,10 @@
 @mixin color-circle {
   position: absolute;
 
-  $circle_size: $lem * 10;
-  $circle_size_growth: 10;
+  $circle_size: $lem * 8;
+  $circle_size_growth: 8;
 
-  @for $i from 1 through 4 {
+  @for $i from 1 through 7 {
     &:nth-of-type(#{$i}) {
       $this_circle_size: ($i - 1) * $circle_size_growth + $circle_size;
 
