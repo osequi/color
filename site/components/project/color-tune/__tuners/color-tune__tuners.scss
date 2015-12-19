@@ -1,0 +1,11 @@
+@mixin color-tune__tuners {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 25vw;
+  padding: $lem;
+
+  .tuner {
+    @include tuner;
+  }
+}

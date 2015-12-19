@@ -1,3 +1,10 @@
 @mixin color-tune {
   @include full-page;
+
+  display: flex;
+  justify-content: flex-end;
+
+  &__tuners {
+    @include color-tune__tuners;
+  }
 }

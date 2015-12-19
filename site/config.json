@@ -8,6 +8,12 @@
     "header": [
     ],
     "footer": [
+      {
+        "file": "spectrum.js"
+      },
+      {
+        "file": "site.min.js"
+      }
     ]
   }
 }
