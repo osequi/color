@@ -12,6 +12,9 @@
         "file": "spectrum.js"
       },
       {
+        "file": "colormix-2.0.0.min.js"
+      },
+      {
         "file": "site.min.js"
       }
     ]

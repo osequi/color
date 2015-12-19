@@ -5,7 +5,7 @@
     {% set colors = Array.prototype.constructor.call(null, 200) %}
     {% for color in colors %}
       {% if loop.index <= circle %}
-        <li class="color"></li>
+        <li class="color color-{{ index }}-{{ loop.index }}" data-class="color-{{ index }}-{{ loop.index }}"></li>
       {% endif %}
     {% endfor %}
   </ul>

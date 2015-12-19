@@ -7,10 +7,9 @@ var tunerChange = function(tunersID) {
 
   function change() {
     var tunerValue = this.value;
-    var tunerType = this.parentNode.dataset.name;
     var colorValue = this.parentNode.parentNode.dataset.color;
-    
-    changeColorWheelColors(tunerType, tunerValue, colorValue);
+
+    changeColorWheelColors(tunerValue, colorValue);
   }
 }
 
