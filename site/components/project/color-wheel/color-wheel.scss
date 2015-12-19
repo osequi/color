@@ -2,15 +2,21 @@
 
 @mixin color-wheel {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+
+  @include full-page;
 
   &__circles {
     position: relative;
 
+    $nr_of_wheels: 7;
+    $circle_size: $lem * 8;
+    $circle_size_growth: 8;
+
+    margin-left: ($circle_size + ($nr_of_wheels - 1) * $circle_size_growth) / 1.75;
+
     .color-circle {
-      @include color-circle(8);
+      @include color-circle($nr_of_wheels, $circle_size, $circle_size_growth);
     }
   }
 }

@@ -2,5 +2,6 @@
 {% block content %}
 
   {% include '../../project/color-wheel/color-wheel.html.swig' %}
+  {% include '../../project/color-tune/color-tune.html.swig' %}
 
 {% endblock %}

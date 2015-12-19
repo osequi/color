@@ -28,3 +28,7 @@ In CMYK the default color of the canvas (the paper) is white. Adding a color dar
 ### The color wheel
 
 Starts with 3 basic colors (red, green blue for RGB or cyan, yellow, magenta for CMYK) and generates all other existing colors.
+
+### Altering color properties
+
+http://color-wheel-artist.com/hue.html

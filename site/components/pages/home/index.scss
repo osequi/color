@@ -1,8 +1,14 @@
 html {
   &.home {
     body {
+      position: relative;
+
       .color-wheel {
         @include color-wheel;
+      }
+
+      .color-tune {
+        @include color-tune;
       }
     }
   }

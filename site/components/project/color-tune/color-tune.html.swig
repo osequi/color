@@ -1,0 +1,5 @@
+<section class="color-tune">
+  <h3>Color tune</h3>
+
+  Color tune;
+</section>
