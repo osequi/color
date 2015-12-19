@@ -24,3 +24,7 @@ This happens because the RGB model is additive, the CMYK model is substractive.
 
 In RGB the default color of the canvas (the screen) is black. Adding a color lightens up the default black.
 In CMYK the default color of the canvas (the paper) is white. Adding a color darkens the default white.
+
+### The color wheel
+
+Starts with 3 basic colors (red, green blue for RGB or cyan, yellow, magenta for CMYK) and generates all other existing colors.

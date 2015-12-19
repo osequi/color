@@ -10,7 +10,7 @@
     position: relative;
 
     .color-circle {
-      @include color-circle;
+      @include color-circle(8);
     }
   }
 }
