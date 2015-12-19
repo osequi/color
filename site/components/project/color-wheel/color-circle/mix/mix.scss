@@ -1,16 +1,28 @@
 // Mixin colors
-// A pretty calculated algorithm to create a color palette with n wheels
+// A pretty complicated algorithm to create a color palette with n wheels
 // - the primaries are: (blue, yellow, red) or (b, y, r)
 // - 1. when a next level of colors is generated (ie secondaries) the blue is added to the end of the current colors: (b, y, r, b)
-// - 2. looping through this new array and adding consecutive values gives us (b+y, y+r, r+b) which is (g-reen, 0-range, v-iolet)
-// - for creating the tertiaries we merge the proevious two arrays: (b, g, y, o, r, v) and repeat 1.-2.
+// - 2. looping through this new array and adding consecutive values gives us (b+y, y+r, r+b) which is (g-reen, o-range, v-iolet)
+// - for creating the tertiaries we merge the previous two arrays: (b, g, y, o, r, v) and repeat 1.-2.
 
 
 // The main function
 @function color-mix($index) {
   // blue, yellow, red
   // - DO NOT USE html color names; for example green is #080 instead of #0f0
-  $colors: (#0000ff, #ffff00, #ff0000);
+  $blue: #0000ff;
+  $yellow: #00ff00;
+  $red: #ff0000;
+
+  $blue: adjust-hue($blue, 20%);
+  $yellow: adjust-hue($yellow, 20%);
+  $red: adjust-hue($red, 20%);
+
+  $blue: darken($blue, 10%);
+  $yellow: lighten($yellow, 10%);
+  $red: lighten($red, 10%);
+
+  $colors: ($blue, $yellow, $red);
 
   @if ($index == 1) {
     @return $colors;
