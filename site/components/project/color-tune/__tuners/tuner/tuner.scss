@@ -5,6 +5,10 @@
     display: flex;
     @include text-style(title);
   }
+
+  &__range {
+    @include tuner__range;
+  }
 }
 
 

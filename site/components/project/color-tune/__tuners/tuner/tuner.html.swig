@@ -4,4 +4,5 @@
   <p class="tuner__description">{{ tuner.description }}</p>
 
   <input class="tuner__colorpicker tuner__colorpicker--{{ tuner.name | lower }}" type="text" value="{{ tuner.value }}">
+  {% include '__range/tuner__range.html.swig' %}
 </aside>
