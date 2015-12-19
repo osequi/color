@@ -14,14 +14,6 @@
   $yellow: #00ff00;
   $red: #ff0000;
 
-  $blue: adjust-hue($blue, 20%);
-  $yellow: adjust-hue($yellow, 20%);
-  $red: adjust-hue($red, 20%);
-
-  $blue: darken($blue, 10%);
-  $yellow: lighten($yellow, 10%);
-  $red: lighten($red, 10%);
-
   $colors: ($blue, $yellow, $red);
 
   @if ($index == 1) {
