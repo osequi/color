@@ -1,4 +1,4 @@
-<aside class="tuner">
+<aside class="tuner" data-color="{{ tuner.value }}">
   <h3 class="tuner__title">{{ tuner.name }}</h3>
 
   <p class="tuner__description">{{ tuner.description }}</p>

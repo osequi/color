@@ -13,5 +13,8 @@ $('.tuner .tuner__colorpicker').spectrum({
     '#000000', '#2E3133', '#263326', '#332F2E', '#33332E', '#332E30', '#332E33', '#30332E', '#332F2E',
     '#333333', '#4C4C4C', '#454A4C', '#8C8C8C',
     '#4C3636', '#332424', '#4C4545', '#3D4C42', '#4C4545', '#66493D'
-  ]
+  ],
+  change: function(color) {
+    $(this).parent().attr('data-color', color.toHexString());
+  }
 });
