@@ -1,4 +1,4 @@
-<aside class="tuner__range" data-name="{{ tuner.name | lower }}" data-value="{{ tuner.start }}">
+<aside class="tuner__range {{ range_class }}" data-name="{{ tuner.name | lower }}" data-value="{{ tuner.start }}">
   <h3>Range for {{ tuner.name }}</h3>
 
   <span class="start">0</span>

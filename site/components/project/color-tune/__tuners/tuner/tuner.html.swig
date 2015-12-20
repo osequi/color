@@ -3,6 +3,10 @@
 
   <p class="tuner__description">{{ tuner.description }}</p>
 
-  <input class="tuner__colorpicker tuner__colorpicker--{{ tuner.name | lower }}" type="text" value="{{ tuner.value }}">
+  {% if !tuner.hidden %}
+    {% set range_class = "tuner__range--with-margin" %}
+    <input class="tuner__colorpicker tuner__colorpicker--{{ tuner.name | lower }}" type="text" value="{{ tuner.value }}">
+  {% endif %}
+
   {% include '__range/tuner__range.html.swig' %}
 </aside>

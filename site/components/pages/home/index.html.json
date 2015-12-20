@@ -5,19 +5,29 @@
       "name": "Tint",
       "description": "Lighten / Brightness / Add white",
       "value": "#ffffff",
-      "start": "0"
+      "start": "0",
+      "disabled": true
     },
     {
       "name": "Shade",
       "description": "Darken / Add black",
       "value": "#000000",
-      "start": "0"
+      "start": "0",
+      "disabled": true
     },
     {
       "name": "Tone",
       "description": "Saturation / Intensity / Add gray",
       "value": "#cccccc",
-      "start": "50"
+      "start": "50",
+      "disabled": true
+    },
+    {
+      "name": "Luminance",
+      "description": "Set luminosity",
+      "value": "#cc99cc",
+      "start": "0",
+      "hidden": true
     }
   ]
 }

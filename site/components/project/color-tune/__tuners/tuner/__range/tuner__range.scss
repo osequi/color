@@ -1,4 +1,15 @@
 @mixin tuner__range {
   display: inline-flex;
-  margin-left: $lem;
+
+  .range {
+    width: 15em;
+  }
+
+  &--with-margin {
+    margin-left: $lem;
+
+    .range {
+      width: 100%;
+    }
+  }
 }

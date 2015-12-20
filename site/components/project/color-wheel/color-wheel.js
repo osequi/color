@@ -28,6 +28,9 @@ var changeColorWheelColors = function(tunerName, tunerValue, oldTunerValue, colo
       case 'shade':
         var color = changeDarkness(oldColor, tunerValue, oldTunerValue);
         break;
+      case 'luminance':
+        var color = changeLuminace(oldColor, tunerValue);
+        break;
     }
 
     if (tunerName == 'tone') {
@@ -36,6 +39,12 @@ var changeColorWheelColors = function(tunerName, tunerValue, oldTunerValue, colo
 
     var rule = '.' + itemClass + '::after { background-color: ' + color + ' !important; } ';
     rules += rule;
+  }
+
+  // Change luminace
+  function changeLuminace(oldColor, tunerValue) {
+    var color = chroma(oldColor);
+    return color.luminance(tunerValue / 100);
   }
 
   // Change darkness
