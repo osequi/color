@@ -6,10 +6,14 @@ var tunerChange = function(tunersID) {
   }
 
   function change() {
-    var tunerValue = this.value;
+    var tunerValue = parseInt(this.value);
+    var oldTunerValue = this.parentNode.dataset.value;
+    var tunerName = this.parentNode.dataset.name;
     var colorValue = this.parentNode.parentNode.dataset.color;
 
-    changeColorWheelColors(tunerValue, colorValue);
+    this.parentNode.dataset.value = tunerValue;
+
+    changeColorWheelColors(tunerName, tunerValue, oldTunerValue, colorValue);
   }
 }
 
