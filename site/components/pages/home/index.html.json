@@ -31,6 +31,24 @@
       "radio": [
         "rgb", "hsl", "hsv", "hsi", "lab", "lch", "hcl"
       ]
+    },
+    {
+      "name": "Mix",
+      "description": "Mix colors",
+      "value": "#cc99cc",
+      "start": "0",
+      "radio": [
+        "rgb", "hsl", "hsv", "hsi", "lab", "lch", "hcl"
+      ]
+    },
+    {
+      "name": "Blend",
+      "description": "Blend colors",
+      "value": "3c990c",
+      "start": "0",
+      "radio": [
+        "multiply", "darken", "lighten", "screen", "overlay", "burn", "dogde"
+      ]
     }
   ]
 }

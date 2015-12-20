@@ -31,14 +31,30 @@ var changeColorWheelColors = function(tunerName, tunerValue, oldTunerValue, colo
       case 'luminance':
         var color = changeLuminace(oldColor, tunerValue, radioValue);
         break;
-    }
-
-    if (tunerName == 'tone') {
-
+      case 'mix':
+        var color = colorMix(oldColor, tunerValue, colorValue, radioValue);
+        break;
+      case 'blend':
+        var color = colorBlend(oldColor, colorValue, radioValue);
+        break;
     }
 
     var rule = '.' + itemClass + '::after { background-color: ' + color + ' !important; } ';
     rules += rule;
+  }
+
+  // Blend colors {
+  function colorBlend(oldColor, colorValue, radioValue) {
+    var oldColor = chroma(oldColor);
+    var newColor = chroma(colorValue);
+    return chroma.blend(oldColor, newColor, radioValue);
+  }
+
+  // Mix colors
+  function colorMix(oldColor, tunerValue, colorValue, radioValue) {
+    var oldColor = chroma(oldColor);
+    var newColor = chroma(colorValue);
+    return chroma.mix(oldColor, newColor, tunerValue / 100, radioValue);
   }
 
   // Change luminace
