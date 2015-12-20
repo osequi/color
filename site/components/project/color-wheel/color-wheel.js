@@ -7,6 +7,9 @@
 var changeColorWheelColors = function(tunerValue, colorValue) {
   var colors = document.querySelectorAll('.color-wheel .colors .color');
 
+  tunerValue = parseInt(tunerValue) / 100;
+  console.log('t:' + tunerValue);
+
   var rules = '';
 
   for (i = 0; i < colors.length; i++) {
@@ -28,11 +31,9 @@ var changeColorWheelColors = function(tunerValue, colorValue) {
 
   // mix two colors
   function createNewColor(oldColor, tunerValue, colorValue) {
-    var oldColor = new ColorMix.Color(oldColor);
-    var newColor = new ColorMix.Color(colorValue);
-
-    tunerValue = parseInt(tunerValue);
-    return ColorMix.mix([oldColor, newColor], [100 - tunerValue, tunerValue]);
+    var oldColor = chroma(oldColor);
+    var newColor = chroma(colorValue);
+    return chroma.mix(oldColor, newColor, tunerValue).hex();
   }
 
 
