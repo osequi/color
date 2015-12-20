@@ -13,7 +13,7 @@
     },
     {
       "name": "Tone",
-      "description": "Saturation / Add gray",
+      "description": "Saturation / Intensity / Add gray",
       "value": "#cccccc"
     }
   ]
