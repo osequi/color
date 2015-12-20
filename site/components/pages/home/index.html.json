@@ -4,17 +4,20 @@
     {
       "name": "Tint",
       "description": "Lighten / Brightness / Add white",
-      "value": "#ffffff"
+      "value": "#ffffff",
+      "start": "0"
     },
     {
       "name": "Shade",
       "description": "Darken / Add black",
-      "value": "#000000"
+      "value": "#000000",
+      "start": "0"
     },
     {
       "name": "Tone",
       "description": "Saturation / Intensity / Add gray",
-      "value": "#cccccc"
+      "value": "#cccccc",
+      "start": "50"
     }
   ]
 }

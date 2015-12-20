@@ -18,12 +18,52 @@ var changeColorWheelColors = function(tunerName, tunerValue, oldTunerValue, colo
     var itemClass = item.dataset.class;
     var oldColor = window.getComputedStyle(item, '::after').getPropertyValue('background-color');
 
+    switch (tunerName) {
+      case 'tone':
+        var color = changeTone(oldColor, tunerValue, oldTunerValue);
+        break;
+      case 'tint':
+        var color = changeBrightness(oldColor, tunerValue, oldTunerValue);
+        break;
+      case 'shade':
+        var color = changeDarkness(oldColor, tunerValue, oldTunerValue);
+        break;
+    }
+
     if (tunerName == 'tone') {
-      var color = changeTone(oldColor, tunerValue, oldTunerValue);
+
     }
 
     var rule = '.' + itemClass + '::after { background-color: ' + color + ' !important; } ';
     rules += rule;
+  }
+
+  // Change darkness
+  function changeDarkness(oldColor, tunerValue, oldTunerValue) {
+    var color = chroma(oldColor);
+
+    var diff = oldTunerValue - tunerValue;
+    var value = Math.abs(diff) / 100;
+
+    if (diff < 0) {
+      return color.darken(value);
+    } else {
+      return color.brighten(value);
+    }
+  }
+
+  // Change brightness
+  function changeBrightness(oldColor, tunerValue, oldTunerValue) {
+    var color = chroma(oldColor);
+
+    var diff = oldTunerValue - tunerValue;
+    var value = Math.abs(diff) / 100;
+
+    if (diff < 0) {
+      return color.brighten(value);
+    } else {
+      return color.darken(value);
+    }
   }
 
 
