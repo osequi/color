@@ -2,7 +2,7 @@ var tunerChange = function(tunersID) {
   var tuners = document.querySelectorAll(tunersID);
 
   for (var i=0; i < tuners.length; i++) {
-    tuners[i].addEventListener('input', change, false);
+    tuners[i].addEventListener('change', change, false);
   }
 
   function change() {
