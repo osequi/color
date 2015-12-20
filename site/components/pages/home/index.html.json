@@ -27,7 +27,10 @@
       "description": "Set luminosity",
       "value": "#cc99cc",
       "start": "0",
-      "hidden": true
+      "hidden": true,
+      "radio": [
+        "rgb", "hsl", "hsv", "hsi", "lab", "lch", "hcl"
+      ]
     }
   ]
 }

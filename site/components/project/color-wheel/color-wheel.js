@@ -3,18 +3,18 @@
 // - tunerValue: number
 // - oldTunerValue: number
 // - colorValue: #xxyyxx
-var changeColorWheelColors = function(tunerName, tunerValue, oldTunerValue, colorValue) {
+var changeColorWheelColors = function(tunerName, tunerValue, oldTunerValue, colorValue, radioValue) {
   var colors = document.querySelectorAll('.color-wheel .colors .color');
 
   var rules = '';
 
   for (i = 0; i < colors.length; i++) {
-    changeColor(colors[i], tunerName, tunerValue, oldTunerValue, colorValue);
+    changeColor(colors[i], tunerName, tunerValue, oldTunerValue, colorValue, radioValue);
   }
 
 
   // Change all colors to new colors
-  function changeColor(item, tunerName, tunerValue, oldTunerValue, colorValue) {
+  function changeColor(item, tunerName, tunerValue, oldTunerValue, colorValue, radioValue) {
     var itemClass = item.dataset.class;
     var oldColor = window.getComputedStyle(item, '::after').getPropertyValue('background-color');
 
@@ -29,7 +29,7 @@ var changeColorWheelColors = function(tunerName, tunerValue, oldTunerValue, colo
         var color = changeDarkness(oldColor, tunerValue, oldTunerValue);
         break;
       case 'luminance':
-        var color = changeLuminace(oldColor, tunerValue);
+        var color = changeLuminace(oldColor, tunerValue, radioValue);
         break;
     }
 
@@ -42,9 +42,10 @@ var changeColorWheelColors = function(tunerName, tunerValue, oldTunerValue, colo
   }
 
   // Change luminace
-  function changeLuminace(oldColor, tunerValue) {
+  function changeLuminace(oldColor, tunerValue, radioValue) {
     var color = chroma(oldColor);
-    return color.luminance(tunerValue / 100);
+    console.log(radioValue);
+    return color.luminance(tunerValue / 100, radioValue);
   }
 
   // Change darkness

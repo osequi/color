@@ -9,4 +9,8 @@
   {% endif %}
 
   {% include '__range/tuner__range.html.swig' %}
+
+  {% if tuner.radio %}
+    {% include '__radio/tuner__radio.html.swig' %}
+  {% endif %}
 </aside>

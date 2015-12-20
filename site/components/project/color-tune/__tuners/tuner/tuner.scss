@@ -9,6 +9,10 @@
   &__range {
     @include tuner__range;
   }
+
+  &__radio {
+    @include tuner__radio;
+  }
 }
 
 
