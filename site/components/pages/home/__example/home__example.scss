@@ -1,8 +1,20 @@
 @mixin home__example {
   display: none;
 
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
   .big-text {
     @include big-text;
+  }
+
+  .inverted-text {
+    @include inverted-text;
+  }
+
+  .different-section {
+    @include different-section;
   }
 
 

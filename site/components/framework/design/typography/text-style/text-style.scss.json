@@ -172,10 +172,6 @@
         {
           "name": "padding",
           "value": "$lem / 2"
-        },
-        {
-          "name": "opacity",
-          "value": ".9 !important"
         }
       ]
     }

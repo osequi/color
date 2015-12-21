@@ -1,0 +1,12 @@
+@mixin different-section {
+  flex-basis: 100%;
+  padding: $lem;
+
+  &__description {
+    @include text-style(body-text);
+  }
+
+  &__palette {
+    @include different-section__palette;
+  }
+}

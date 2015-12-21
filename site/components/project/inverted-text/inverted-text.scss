@@ -1,4 +1,4 @@
-@mixin big-text {
+@mixin inverted-text {
   display: flex;
   flex-direction: column;
 
@@ -6,15 +6,13 @@
   max-width: 25em;
 
   .text1 {
-    @include text-style(large);
-  }
-
-  .text2 {
-    @include text-style(title);
-    margin: $lem 0;
-  }
-
-  .text3 {
     @include text-style(body-text);
+    @include colors(white-on-black);
+
+    padding: $lem;
+
+    .ul {
+      @include ul(underlined);
+    }
   }
 }

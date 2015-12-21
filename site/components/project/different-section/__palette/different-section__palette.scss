@@ -1,0 +1,14 @@
+@mixin different-section__palette {
+  display: flex;
+  
+  .color-swatch {
+    &__value {
+      width: $lem * 5;
+      height: $lem * 5;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+}
