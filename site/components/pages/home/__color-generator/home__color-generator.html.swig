@@ -5,4 +5,6 @@
 
   {% set tuners = tuners %}
   {% include '../../../project/color-tune/color-tune.html.swig' %}
+
+  {% include '../../../project/color-scheme/color-scheme.html.swig' %}
 </section>

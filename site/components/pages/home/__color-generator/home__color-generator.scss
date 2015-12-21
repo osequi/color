@@ -2,14 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: 0;
 
   @include full-page;
-  
+
   .color-wheel {
     @include color-wheel;
+    flex-grow: 2;
   }
 
   .color-tune {
     @include color-tune;
+  }
+
+  .color-scheme {
+    @include color-scheme;
+  }
+
+  .color-tune,
+  .color-scheme {
+    max-width: 20em;
+    padding: $lem $lem * 2;
   }
 }

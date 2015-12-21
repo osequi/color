@@ -1,0 +1,10 @@
+@mixin color-swatch {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-basis: 0;
+
+  &__name,
+  &__value {
+    flex-basis: 40%;
+  }
+}

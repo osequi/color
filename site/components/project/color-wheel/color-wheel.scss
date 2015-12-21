@@ -12,8 +12,6 @@
     $circle_size: $lem * 8;
     $circle_size_growth: 8;
 
-    margin-right: ($nr_of_wheels * $circle_size_growth + $circle_size) / 2;
-
     .color-circle {
       @include color-circle($nr_of_wheels, $circle_size, $circle_size_growth);
     }

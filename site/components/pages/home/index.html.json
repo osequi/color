@@ -1,5 +1,19 @@
 {
   "title": "Home",
+  "palette": [
+    {
+      "name": "background"
+    },
+    {
+      "name": "text"
+    },
+    {
+      "name": "highlight"
+    },
+    {
+      "name": "shade"
+    }
+  ],
   "tuners": [
     {
       "name": "Tint",
