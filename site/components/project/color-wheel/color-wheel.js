@@ -14,6 +14,7 @@ var changeColorForPalette = function(colorsID, swatchesID) {
       if (swatches[i].classList.contains('color-swatch--active')) {
         swatches[i].querySelector('.color-swatch__value').value = color;
         swatches[i].querySelector('.color-swatch__value').style.backgroundColor = color;
+        swatches[i].querySelector('.color-swatch__button').classList.add('color-swatch__button--active');
 
         if (swatches[i].dataset.name == 'background') {
           document.body.style.backgroundColor = color;

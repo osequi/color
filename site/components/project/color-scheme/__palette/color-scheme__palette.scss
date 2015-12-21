@@ -1,4 +1,7 @@
 @mixin color-scheme__palette {
+  display: flex;
+  flex-direction: column;
+  
   .color-swatch {
     @include color-swatch;
   }

@@ -1,20 +1,42 @@
 @mixin color-swatch {
   display: flex;
-  flex-wrap: nowrap;
-  flex-basis: 0;
-
-  &__name,
-  &__value {
-    flex-basis: 40%;
-  }
+  flex-wrap: wrap;
+  margin-bottom: $lem;
 
   &__name {
+    display: flex;
+    flex-basis: 100%;
     cursor: pointer;
+    margin-bottom: $lem / 2;
+
+    @include text-style(title);
   }
+
+  &__value {
+    width: $lem * 6;
+    height: $lem * 3;
+    border: 1px solid;
+    margin-right: $lem / 2;
+  }
+
+  &__button {
+    display: none;
+
+    &--active {
+      display: flex;
+    }
+  }
+
 
   &--active {
     .color-swatch__name {
-      @include text-style(subtitle);
+      &:after {
+        content: '/pick from wheel';
+        @include text-style(small);
+        margin-left: $lem;
+        color: red;
+      };
     }
   }
+
 }
