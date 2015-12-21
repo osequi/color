@@ -6,6 +6,14 @@ html {
       .home__color-generator {
         @include home__color-generator;
       }
+
+      .home__example {
+        @include home__example;
+      }
+
+      .home__switcher {
+        @include home__switcher;
+      }
     }
   }
 }

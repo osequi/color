@@ -1,0 +1,5 @@
+@mixin big-text {
+  .text {
+    @include text-style(large);
+  }
+}

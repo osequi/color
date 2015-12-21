@@ -1,0 +1,12 @@
+@mixin home__example {
+  display: none;
+
+  .big-text {
+    @include big-text;
+  }
+
+
+  &--active {
+    display: flex;
+  }
+}

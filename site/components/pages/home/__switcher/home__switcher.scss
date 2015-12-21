@@ -1,0 +1,10 @@
+@mixin home__switcher {
+  position: absolute;
+  top: $lem;
+  right: $lem;
+
+  .switcher {
+    @include text-style(large);
+    cursor: pointer;
+  }
+}
