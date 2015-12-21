@@ -1,17 +1,5 @@
-var showSingleWheel = function(wheelsID) {
-  var wheels = document.querySelectorAll(wheelsID);
 
-  for (var i=0; i < wheels.length; i++) {
-    wheels[i].addEventListener('click', clickOnWheel, false);
-  }
-
-  function clickOnWheel() {
-    this.style.zIndex = 1000;
-  }
-}
-
-
-var changeBackground = function(colorsID) {
+var changeColorForPalette = function(colorsID, swatchesID) {
   var colors = document.querySelectorAll(colorsID);
 
   for (var i=0; i < colors.length; i++) {
@@ -20,10 +8,20 @@ var changeBackground = function(colorsID) {
 
   function clickOnColor() {
     var color = window.getComputedStyle(this, '::after').getPropertyValue('background-color');
-    document.body.style.backgroundColor = color;
+    var swatches = document.querySelectorAll(swatchesID);
+
+    for (var i=0; i < swatches.length; i++) {
+      if (swatches[i].classList.contains('color-swatch--active')) {
+        swatches[i].querySelector('.color-swatch__value').value = color;
+        swatches[i].querySelector('.color-swatch__value').style.backgroundColor = color;
+
+        if (swatches[i].dataset.name == 'background') {
+          document.body.style.backgroundColor = color;
+        }
+      }
+    }
   }
 }
 
 
-//showSingleWheel('.color-wheel .color-circle');
-changeBackground('.color-wheel .color');
+changeColorForPalette('.color-wheel .color', '.color-scheme .color-swatch');
