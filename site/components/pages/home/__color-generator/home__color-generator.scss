@@ -1,0 +1,15 @@
+@mixin home__color-generator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include full-page;
+  
+  .color-wheel {
+    @include color-wheel;
+  }
+
+  .color-tune {
+    @include color-tune;
+  }
+}
