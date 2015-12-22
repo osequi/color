@@ -17,6 +17,10 @@
     @include different-section;
   }
 
+  .call-to-action {
+    @include call-to-action;
+  }
+
 
   &--active {
     display: flex;

@@ -1,0 +1,16 @@
+@mixin call-to-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &__text {
+    .button {
+      @include button;
+    }
+  }
+
+  .figure {
+    @include figure($loading: false);
+  }
+}

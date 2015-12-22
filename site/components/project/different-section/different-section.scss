@@ -1,6 +1,10 @@
 @mixin different-section {
   flex-basis: 100%;
-  padding: $lem;
+  padding: $lem * 2 $lem;
+
+  @include border--thick(top);
+  @include border--thick(bottom);
+
 
   &__description {
     @include text-style(body-text);

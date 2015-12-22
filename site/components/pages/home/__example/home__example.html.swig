@@ -4,4 +4,5 @@
   {% include '../../../project/big-text/big-text.html.swig' %}
   {% include '../../../project/inverted-text/inverted-text.html.swig' %}
   {% include '../../../project/different-section/different-section.html.swig' %}
+  {% include '../../../project/call-to-action/call-to-action.html.swig' %}
 </section>
