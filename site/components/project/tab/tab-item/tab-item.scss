@@ -1,0 +1,15 @@
+@mixin tab-item {
+  display: flex;
+
+  &__title {
+    @include tab-item__title;
+  }
+
+  &__description {
+    @include tab-item__description;
+  }
+
+  &__content {
+    @include tab-item__content;
+  }
+}

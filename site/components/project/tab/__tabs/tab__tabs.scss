@@ -1,0 +1,7 @@
+@mixin tab__tabs {
+  display: flex;
+
+  .tab-item {
+    @include tab-item;
+  }
+}

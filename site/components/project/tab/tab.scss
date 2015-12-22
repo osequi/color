@@ -1,0 +1,11 @@
+@mixin tab {
+  display: flex;
+
+  &__title {
+    display: flex;
+  }
+
+  &__tabs {
+    @include tab__tabs;
+  }
+}
