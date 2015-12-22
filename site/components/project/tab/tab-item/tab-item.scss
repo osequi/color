@@ -14,7 +14,14 @@
     @include tab-item__content;
   }
 
+
+  // for portrait
   &--active {
     @include tab-item--active;
+  }
+
+  // for landscape
+  &--visible {
+    @include tab-item--visible;
   }
 }

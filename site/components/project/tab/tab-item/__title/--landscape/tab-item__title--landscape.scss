@@ -1,5 +1,9 @@
 @mixin tab-item__title--landscape {
   @include landscape {
+    .title {
+      cursor: pointer;
+    }
+    
     .trigger {
       display: none;
     }
