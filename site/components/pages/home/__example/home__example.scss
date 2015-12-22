@@ -1,5 +1,8 @@
 @mixin home__example {
   display: none;
+  &--active {
+    display: flex;
+  }
 
   flex-wrap: wrap;
   justify-content: space-around;
@@ -21,8 +24,7 @@
     @include call-to-action;
   }
 
-
-  &--active {
-    display: flex;
+  .features {
+    @include features;
   }
 }

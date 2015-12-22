@@ -64,5 +64,40 @@
         "multiply", "darken", "lighten", "screen", "overlay", "burn", "dogde"
       ]
     }
+  ],
+  "features": [
+    {
+      "title": "Powerful color tuning system",
+      "description": [
+        "Mix and match colors not just on the RGB scale but using HSL, CMYK, Cieluv and 4 more."
+      ]
+    },
+    {
+      "title": "Warm and cold colors",
+      "description": [
+        "The color wheel is constructed in such way the left part displays the warm colors, the right part the cold colors.",
+        "Choose low contrast colors from the same part of the wheel, high contrast colors from the opposite part of the wheel."
+      ]
+    },
+    {
+      "title": "Better Tint, Shade and Tone",
+      "description": [
+        "By default all other color palette creators use white, black and gray for basic color altering operations.",
+        "With this system you can adjust these values with a nifty color picker and make your palette more unique."
+      ]
+    },
+    {
+      "title": "Mix, Blend like in Photoshop",
+      "description": [
+        "Beside changing the brightness and the saturation of your scheme you can also fine tune the luminosity, mix new colors in, and use Photoshop like blending actions like multiply, darken & co."
+      ]
+    },
+    {
+      "title": "Glitch included",
+      "description": [
+        "Some of the tuners are not perfect. If you raise the Luminace to 30% then lower back to 0% you won't find the original color scheme.",
+        "This is good. It makes you create more different color schemes, outside of the box."
+      ]
+    }
   ]
 }

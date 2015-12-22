@@ -1,0 +1,20 @@
+@mixin features {
+  display: flex;
+  flex-basis: 100%;
+
+  justify-content: center;
+  align-items: center;
+
+  .figure {
+    @include figure($loading: false);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    .feature {
+      @include feature;
+    }
+  }
+}

@@ -1,26 +1,42 @@
 // Grid
+// - $item_class: which elements to arrange into a grid
+// - $items_per_column: how many elements in a column
+// - $nr_of_items: the total number of elements
+// - $max_items_to_display: do not display the latest X elements
+// - $padding: if the element has padding; it should contain both left and right paddings
 //
-// Display flexbox items in a responsive grid.
-// On small screens items display below each other, on larger screens in rows and columns.
-//
-// Styleguide grid
-@mixin grid($item, $margin, $basis: none) {
+// - $item_class should not be a class but an element like `div`, `article` etc.
+// - if we have mixed type elements like `h3.item` and `article.item` the `nth-of-type` will not work
+// - maybe replaced with `nth-child` should work 
+@mixin grid($item_class, $items_per_column, $nr_of_items, $max_items_to_display, $margin-right, $margin_bottom, $padding: 0) {
   display: flex;
   flex-wrap: wrap;
 
-  #{$item} {
-    flex-grow: 1;
+  @if ($items_per_column > $nr_of_items) {
+    justify-content: space-between;
+  }
 
-    @if ($basis != none) {
-      flex-basis: $basis;
+  $item_width: percentage(1 / $items_per_column);
+
+  #{$item_class} {
+    flex-basis: calc(#{$item_width} - #{$margin_right} - #{$padding}); // -$lem added because of the thumb decoration
+    margin-right: $margin_right;
+    margin-bottom: $margin_bottom;
+
+    @for $i from 1 to $nr_of_items {
+      &:nth-of-type(#{$i}n) {
+        margin-right: $margin-right;
+      }
     }
 
-    + #{$item} {
-      margin-left: $margin;
+    &:nth-of-type(#{$items_per_column}n) {
+      margin-right: 0;
     }
-    margin-bottom: $margin;
 
-
-    @include grid--mobile($item);
+    @for $i from $max_items_to_display + 1 to $nr_of_items + 1 {
+      &:nth-of-type(#{$i}n) {
+        display: none;
+      }
+    }
   }
 }
