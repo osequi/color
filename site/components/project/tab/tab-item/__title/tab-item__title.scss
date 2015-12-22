@@ -1,3 +1,7 @@
 @mixin tab-item__title {
   display: flex;
+  @include text-style(title);
+
+  @include tab-item__title--portrait;
+  @include tab-item__title--landscape;
 }

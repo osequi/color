@@ -5,10 +5,10 @@
 // - $max_items_to_display: do not display the latest X elements
 // - $padding: if the element has padding; it should contain both left and right paddings
 //
-// - $item_class should not be a class but an element like `div`, `article` etc.
+// - $item_class should not be a class, but an element like `div`, `article` etc.
 // - if we have mixed type elements like `h3.item` and `article.item` the `nth-of-type` will not work
-// - maybe replaced with `nth-child` should work 
-@mixin grid($item_class, $items_per_column, $nr_of_items, $max_items_to_display, $margin-right, $margin_bottom, $padding: 0) {
+// - maybe replaced with `nth-child` should work
+@mixin grid($item_class, $items_per_column, $nr_of_items, $max_items_to_display, $margin-right, $margin_bottom, $padding: 0px) {
   display: flex;
   flex-wrap: wrap;
 

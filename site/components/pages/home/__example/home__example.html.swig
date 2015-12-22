@@ -1,4 +1,4 @@
-<section class="home__example">
+<section class="home__example home__example--active">
   <h3>Example</h3>
 
   {% include '../../../project/big-text/big-text.html.swig' %}

@@ -1,0 +1,5 @@
+@mixin tab-item--active {
+  .tab-item__content {
+    display: flex;
+  }
+}

@@ -1,11 +1,19 @@
-@mixin tab {
+@mixin tab($nr_of_tabs) {
   display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+
+  padding: $lem;
 
   &__title {
-    display: flex;
+    //display: flex;
   }
 
   &__tabs {
-    @include tab__tabs;
+    @include tab__tabs($nr_of_tabs);
+  }
+
+  &__content {
+    @include tab__content;
   }
 }

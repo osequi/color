@@ -18,13 +18,15 @@
 
   .different-section {
     @include different-section;
+    display: none;
   }
 
   .call-to-action {
     @include call-to-action;
+    display: none;
   }
 
   .tab {
-    @include tab;
+    @include tab(3);
   }
 }

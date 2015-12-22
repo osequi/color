@@ -1,5 +1,7 @@
-@mixin tab__tabs {
-  display: flex;
+@mixin tab__tabs($nr_of_tabs) {
+
+  @include tab__tabs--portrait($nr_of_tabs);
+  @include tab__tabs--landscape($nr_of_tabs);
 
   .tab-item {
     @include tab-item;

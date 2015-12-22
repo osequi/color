@@ -1,0 +1,5 @@
+@mixin tab__tabs--portrait($nr_of_tabs) {
+  @include portrait {
+    @include grid('article', 1, $nr_of_tabs, $nr_of_tabs, $lem, $lem);
+  }
+}

@@ -1,5 +1,6 @@
 @mixin tab-item {
   display: flex;
+  flex-direction: column;
 
   &__title {
     @include tab-item__title;
@@ -11,5 +12,9 @@
 
   &__content {
     @include tab-item__content;
+  }
+
+  &--active {
+    @include tab-item--active;
   }
 }

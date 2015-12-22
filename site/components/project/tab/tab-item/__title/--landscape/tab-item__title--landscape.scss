@@ -1,0 +1,7 @@
+@mixin tab-item__title--landscape {
+  @include landscape {
+    .trigger {
+      display: none;
+    }
+  }
+}

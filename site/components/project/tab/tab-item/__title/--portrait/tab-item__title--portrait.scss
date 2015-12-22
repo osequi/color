@@ -1,0 +1,11 @@
+@mixin tab-item__title--portrait {
+  justify-content: space-between;
+  align-items: center;
+
+  @include portrait {
+    .trigger {
+      display: flex;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,7 +1,12 @@
 @mixin home__color-generator {
+  display: none;
   justify-content: center;
   align-items: center;
   flex-basis: 0;
+
+  &--active {
+    display: flex;
+  }
 
   @include full-page;
 
@@ -22,11 +27,5 @@
   .color-scheme {
     width: 20em;
     padding: $lem;
-  }
-
-
-  display: none;
-  &--active {
-    display: flex;
   }
 }

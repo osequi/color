@@ -1,0 +1,5 @@
+@mixin tab__tabs--landscape($nr_of_tabs) {
+  @include landscape {
+    @include grid('article', $nr_of_tabs, $nr_of_tabs, $nr_of_tabs, $lem, $lem);
+  }
+}
