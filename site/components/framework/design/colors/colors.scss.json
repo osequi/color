@@ -2,22 +2,22 @@
   "colors": [
     {
       "name": "light",
-      "value": "rgb(0, 203, 204)",
+      "value": "rgb(247, 245, 233)",
       "description": "Primary color"
     },
     {
       "name": "dark",
-      "value": "rgb(0, 0, 202)",
+      "value": "rgb(70, 70, 70)",
       "description": "Primary color"
     },
     {
       "name": "highlight",
-      "value": "rgb(200, 0, 203)",
+      "value": "rgb(112, 64, 255)",
       "description": "Highlighting color"
     },
     {
       "name": "shade",
-      "value": "rgb(200, 204, 0)",
+      "value": "rgb(205, 205, 205)",
       "description": "Shadinging color"
     }
   ],
@@ -80,6 +80,19 @@
         {
           "name": "color",
           "value": "$dark"
+        },
+        {
+          "name": "background-color",
+          "value": "$highlight"
+        }
+      ]
+    },
+    {
+      "name": "light-on-highlight",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$light"
         },
         {
           "name": "background-color",

@@ -8,7 +8,7 @@
 
   <div class="different-section__palette">
     {% for color in palette %}
-      {% include '../color-scheme/__palette/color-swatch/color-swatch.html.swig' %}
+      <div class="color-swatch {{ color.name }}"></div>
     {% endfor %}
   </div>
 </article>

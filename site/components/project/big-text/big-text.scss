@@ -3,7 +3,7 @@
   flex-direction: column;
 
   .text1 {
-    @include text-style(large);
+    @include text-style(headline);
   }
 
   .text2 {

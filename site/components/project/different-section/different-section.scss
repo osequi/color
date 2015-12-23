@@ -1,14 +1,30 @@
 @mixin different-section {
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 100%;
-  padding: 10vh $lem;
 
-  @include text-style(contrast);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+
+  @include mobile {
+    padding: $lem;
+  }
+
+  @include mobile-and-up {
+    @include fixed-width(90vw, padding);
+    justify-content: space-between;
+    align-items: center;
+  }
 
   @include landscape {
     flex-wrap: nowrap;
   }
+
+  @include desktop {
+    @include fixed-width(80vw, padding);
+  }
+
+
+  @include text-style(contrast);
 
 
   &__description {

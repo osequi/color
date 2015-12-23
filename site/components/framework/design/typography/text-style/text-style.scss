@@ -70,24 +70,12 @@ $text-block-width: 25em;
     
   }
   
-  // Subtitle
-  // - Section subtitles
-  @if ($variant == 'subtitle') {
-    @include font(nimbus-sans-bold);
-    @include colors(white-on-black);
-    
-    letter-spacing: 1.7px;
-    
-    
-  }
-  
-  // Menu
+  // Navigation
   // - Navigation
-  @if ($variant == 'menu') {
+  @if ($variant == 'navigation') {
     @include font(nimbus-sans-black);
-    @include border--thick;
     @include uppercase($lem / 8);
-    @include scale(large-1);
+    @include scale(small-1);
     
     
     
@@ -102,42 +90,21 @@ $text-block-width: 25em;
     
   }
   
-  // Large
-  // - Large text, like five times the default
-  @if ($variant == 'large') {
-    @include font(nimbus-sans-black);
-    @include scale(large-5);
-    
-    
-    
-  }
-  
-  // Small
+  // Small 1
   // - Small text
-  @if ($variant == 'small') {
+  @if ($variant == 'small-1') {
     @include scale(small-1);
     
     
     
   }
   
-  // Section title
-  // - Small text on inverted colors
-  @if ($variant == 'section-title') {
-    @include scale(small-1);
-    @include colors(white-on-black);
-    @include font(nimbus-sans-bold);
+  // Headline
+  // - Large text, like one times the default
+  @if ($variant == 'headline') {
+    @include scale(large-5);
+    @include font(nimbus-sans-black);
     
-    
-    
-  }
-  
-  // Foreground text
-  // - Text on a background image or video
-  @if ($variant == 'foreground-text') {
-    @include colors(black-on-white);
-    
-    padding: $lem / 2;
     
     
   }
@@ -190,20 +157,10 @@ $text-block-width: 25em;
   
 }
 
-.text-style--subtitle {
-  @include font(nimbus-sans-bold);
-  @include colors(white-on-black);
-  
-  letter-spacing: 1.7px;
-  
-  
-}
-
-.text-style--menu {
+.text-style--navigation {
   @include font(nimbus-sans-black);
-  @include border--thick;
   @include uppercase($lem / 8);
-  @include scale(large-1);
+  @include scale(small-1);
   
   
   
@@ -216,34 +173,17 @@ $text-block-width: 25em;
   
 }
 
-.text-style--large {
-  @include font(nimbus-sans-black);
+.text-style--small-1 {
+  @include scale(small-1);
+  
+  
+  
+}
+
+.text-style--headline {
   @include scale(large-5);
+  @include font(nimbus-sans-black);
   
-  
-  
-}
-
-.text-style--small {
-  @include scale(small-1);
-  
-  
-  
-}
-
-.text-style--section-title {
-  @include scale(small-1);
-  @include colors(white-on-black);
-  @include font(nimbus-sans-bold);
-  
-  
-  
-}
-
-.text-style--foreground-text {
-  @include colors(black-on-white);
-  
-  padding: $lem / 2;
   
   
 }

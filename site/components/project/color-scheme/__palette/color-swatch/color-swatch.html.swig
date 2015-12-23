@@ -1,4 +1,4 @@
-<aside class="color-swatch" data-name="{{ color.name }}">
+<aside class="color-swatch {{ color.name }}" data-name="{{ color.name }}">
   <h3 class="color-swatch__name">{{ color.name }}</h3>
 
   <input class="color-swatch__value" type="text">

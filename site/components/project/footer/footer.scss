@@ -1,9 +1,28 @@
 @mixin footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
-  padding: $lem;
+  padding-top: $lem;
+  padding-bottom: $lem;
+
+  @include mobile {
+    padding: $lem;
+  }
+
+  @include mobile-and-up {
+    @include fixed-width(90vw, padding);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include landscape {
+    flex-wrap: nowrap;
+  }
+
+  @include desktop {
+    @include fixed-width(80vw, padding);
+  }
+
   @include text-style(inverted);
 
   a, .link {

@@ -7,16 +7,16 @@
 // Styleguide colors
 
 // Primary color
-$light: rgb(0, 203, 204);
+$light: rgb(247, 245, 233);
 
 // Primary color
-$dark: rgb(0, 0, 202);
+$dark: rgb(70, 70, 70);
 
 // Highlighting color
-$highlight: rgb(200, 0, 203);
+$highlight: rgb(112, 64, 255);
 
 // Shadinging color
-$shade: rgb(200, 204, 0);
+$shade: rgb(205, 205, 205);
 
 
 // Color combinations. Colors are not used standalone but in pairs
@@ -52,6 +52,12 @@ $shade: rgb(200, 204, 0);
     
   }
 
+  @if ($name == 'light-on-highlight') {
+    color: $light;
+    background-color: $highlight;
+    
+  }
+
   @if ($name == 'shade-on-light') {
     color: $shade;
     background-color: $light;
@@ -69,19 +75,19 @@ $shade: rgb(200, 204, 0);
 // Color classes
 
 .light {
-  background: rgb(0, 203, 204);
+  background: rgb(247, 245, 233);
 };
 
 .dark {
-  background: rgb(0, 0, 202);
+  background: rgb(70, 70, 70);
 };
 
 .highlight {
-  background: rgb(200, 0, 203);
+  background: rgb(112, 64, 255);
 };
 
 .shade {
-  background: rgb(200, 204, 0);
+  background: rgb(205, 205, 205);
 };
 
 
@@ -113,6 +119,12 @@ $shade: rgb(200, 204, 0);
 
 .dark-on-highlight {
   color: $dark;
+  background-color: $highlight;
+  
+}
+
+.light-on-highlight {
+  color: $light;
   background-color: $highlight;
   
 }

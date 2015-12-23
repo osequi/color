@@ -1,5 +1,15 @@
-@mixin fixed-width($size: 80vw) {
+@mixin fixed-width($size: 80vw, $type: margin) {
   max-width: $size;
   width: 100%;
-  margin: auto calc((100% - #{$size}) / 2);
+
+  $margin: calc((100% - #{$size}) / 2);
+
+  @if ($type == margin) {
+    margin: auto $margin;
+  }
+
+  @if ($type == padding) {
+    padding-left: $margin;
+    padding-right: $margin;
+  }
 }

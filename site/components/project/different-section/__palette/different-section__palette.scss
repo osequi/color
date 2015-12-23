@@ -1,5 +1,5 @@
 @mixin different-section__palette {
-  flex-basis: 100%;
+  justify-content: center;
 
   @include mobile {
     @include grid('.color-swatch', 2, 10, 10, $lem, $lem);
@@ -18,14 +18,11 @@
   }
 
   .color-swatch {
-    &__value {
-      width: $lem * 5;
-      height: $lem * 5;
-      pointer-events: none;
-    }
+    width: $lem * 10;
+    height: $lem * 5;
 
-    &__button {
-      display: none;
+    &.shade {
+      border: 1px solid;
     }
   }
 }
