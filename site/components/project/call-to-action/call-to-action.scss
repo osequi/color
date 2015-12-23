@@ -1,10 +1,13 @@
 @mixin call-to-action {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
 
   &__text {
+    padding-top: $lem;
+    
     .button {
       @include button;
     }

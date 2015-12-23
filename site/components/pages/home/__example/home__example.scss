@@ -21,4 +21,8 @@
   .features {
     @include features(5);
   }
+
+  .footer {
+    @include footer;
+  }
 }

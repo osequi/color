@@ -6,4 +6,5 @@
   {% include '../../../project/call-to-action/call-to-action.html.swig' %}
   {# include '../../../project/tab/tab.html.swig' #}
   {% include '../../../project/features/features.html.swig' %}
+  {% include '../../../project/footer/footer.html.swig' %}
 </section>

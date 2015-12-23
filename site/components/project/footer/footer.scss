@@ -1,0 +1,8 @@
+@mixin footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: $lem;
+  @include colors(white-on-black);
+}
