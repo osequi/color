@@ -7,9 +7,9 @@
 
   &__text {
     padding-top: $lem;
-    
+
     .button {
-      @include button;
+      @include button(cold-on-highlight);
     }
   }
 

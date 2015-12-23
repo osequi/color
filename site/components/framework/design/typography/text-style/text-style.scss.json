@@ -15,13 +15,35 @@
         },
         {
           "name": "colors",
-          "value": "black-on-white"
+          "value": "cold-on-warm"
         }
       ],
       "properties": [
         {
           "name": "letter-spacing",
           "value": "1.1px"
+        }
+      ]
+    },
+    {
+      "name": "Inverted",
+      "description": "Inverted default text",
+      "based_on": "Nimbus Sans",
+      "mixins": [
+        {
+          "name": "colors",
+          "value": "warm-on-cold"
+        }
+      ]
+    },
+    {
+      "name": "Contrast",
+      "description": "Contrast to default text",
+      "based_on": "Nimbus Sans",
+      "mixins": [
+        {
+          "name": "colors",
+          "value": "cold-on-shade"
         }
       ]
     },

@@ -1,40 +1,115 @@
 {
   "colors": [
     {
-      "name": "white",
-      "value": "#f1f1f1",
-      "description": "Highlight color"
+      "name": "warm",
+      "value": "rgb(0, 203, 204)",
+      "description": "Primary color"
     },
     {
-      "name": "black",
-      "value": "#1f1f1f",
-      "description": "Shading color"
+      "name": "cold",
+      "value": "rgb(0, 0, 202)",
+      "description": "Primary color"
+    },
+    {
+      "name": "highlight",
+      "value": "rgb(200, 0, 203)",
+      "description": "Highlighting color"
+    },
+    {
+      "name": "shade",
+      "value": "rgb(200, 204, 0)",
+      "description": "Shadinging color"
     }
   ],
   "color_pairs": [
     {
-      "name": "white-on-black",
+      "name": "cold-on-warm",
       "properties": [
         {
           "name": "color",
-          "value": "$white"
+          "value": "$cold"
         },
         {
           "name": "background-color",
-          "value": "$black"
+          "value": "$warm"
         }
       ]
     },
     {
-      "name": "black-on-white",
+      "name": "warm-on-cold",
       "properties": [
         {
           "name": "color",
-          "value": "$black"
+          "value": "$warm"
         },
         {
           "name": "background-color",
-          "value": "$white"
+          "value": "$cold"
+        }
+      ]
+    },
+    {
+      "name": "highlight-on-warm",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$highlight"
+        },
+        {
+          "name": "background-color",
+          "value": "$warm"
+        }
+      ]
+    },
+    {
+      "name": "highlight-on-cold",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$highlight"
+        },
+        {
+          "name": "background-color",
+          "value": "$cold"
+        }
+      ]
+    },
+    {
+      "name": "cold-on-highlight",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$cold"
+        },
+        {
+          "name": "background-color",
+          "value": "$highlight"
+        }
+      ]
+    },
+    {
+      "name": "shade-on-warm",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$shade"
+        },
+        {
+          "name": "background-color",
+          "value": "$warm"
+        }
+      ]
+    },
+    {
+      "name": "cold-on-shade",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$cold"
+        },
+        {
+          "name": "background-color",
+          "value": "$shade"
         }
       ]
     }

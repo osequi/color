@@ -4,5 +4,9 @@
   justify-content: space-between;
 
   padding: $lem;
-  @include colors(white-on-black);
+  @include text-style(inverted);
+
+  a, .link {
+    @include link(highlight-on-cold);
+  }
 }

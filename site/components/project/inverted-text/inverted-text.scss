@@ -6,7 +6,7 @@
 
   .text1 {
     @include text-style(body-text);
-    @include colors(white-on-black);
+    @include text-style(inverted);
 
     padding: $lem;
     max-width: calc(25em - #{$lem * 2});

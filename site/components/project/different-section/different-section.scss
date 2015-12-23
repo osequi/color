@@ -4,8 +4,7 @@
   flex-basis: 100%;
   padding: 10vh $lem;
 
-  @include border--thick(top);
-  @include border--thick(bottom);
+  @include text-style(contrast);
 
   @include landscape {
     flex-wrap: nowrap;

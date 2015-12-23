@@ -6,25 +6,61 @@
 //
 // Styleguide colors
 
-// Highlight color
-$white: #f1f1f1;
+// Primary color
+$warm: rgb(0, 203, 204);
 
-// Shading color
-$black: #1f1f1f;
+// Primary color
+$cold: rgb(0, 0, 202);
+
+// Highlighting color
+$highlight: rgb(200, 0, 203);
+
+// Shadinging color
+$shade: rgb(200, 204, 0);
 
 
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
 
-  @if ($name == 'white-on-black') {
-    color: $white;
-    background-color: $black;
+  @if ($name == 'cold-on-warm') {
+    color: $cold;
+    background-color: $warm;
     
   }
 
-  @if ($name == 'black-on-white') {
-    color: $black;
-    background-color: $white;
+  @if ($name == 'warm-on-cold') {
+    color: $warm;
+    background-color: $cold;
+    
+  }
+
+  @if ($name == 'highlight-on-warm') {
+    color: $highlight;
+    background-color: $warm;
+    
+  }
+
+  @if ($name == 'highlight-on-cold') {
+    color: $highlight;
+    background-color: $cold;
+    
+  }
+
+  @if ($name == 'cold-on-highlight') {
+    color: $cold;
+    background-color: $highlight;
+    
+  }
+
+  @if ($name == 'shade-on-warm') {
+    color: $shade;
+    background-color: $warm;
+    
+  }
+
+  @if ($name == 'cold-on-shade') {
+    color: $cold;
+    background-color: $shade;
     
   }
 
@@ -32,26 +68,64 @@ $black: #1f1f1f;
 
 // Color classes
 
-.white {
-  background: #f1f1f1;
+.warm {
+  background: rgb(0, 203, 204);
 };
 
-.black {
-  background: #1f1f1f;
+.cold {
+  background: rgb(0, 0, 202);
+};
+
+.highlight {
+  background: rgb(200, 0, 203);
+};
+
+.shade {
+  background: rgb(200, 204, 0);
 };
 
 
 // Color pair classes
 
-.white-on-black {
-  color: $white;
-  background-color: $black;
+.cold-on-warm {
+  color: $cold;
+  background-color: $warm;
   
 }
 
-.black-on-white {
-  color: $black;
-  background-color: $white;
+.warm-on-cold {
+  color: $warm;
+  background-color: $cold;
+  
+}
+
+.highlight-on-warm {
+  color: $highlight;
+  background-color: $warm;
+  
+}
+
+.highlight-on-cold {
+  color: $highlight;
+  background-color: $cold;
+  
+}
+
+.cold-on-highlight {
+  color: $cold;
+  background-color: $highlight;
+  
+}
+
+.shade-on-warm {
+  color: $shade;
+  background-color: $warm;
+  
+}
+
+.cold-on-shade {
+  color: $cold;
+  background-color: $shade;
   
 }
 

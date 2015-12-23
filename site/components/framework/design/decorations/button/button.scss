@@ -7,7 +7,7 @@
   padding: $lem / 4 $lem / 2;
 
   .link {
-    @include link($color-scheme);
+    @include link($color-scheme, no-underline);
   }
 
   + .button {
