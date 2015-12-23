@@ -21,6 +21,28 @@
       "description": "Shadinging color"
     }
   ],
+  "colorsA": [
+    {
+      "name": "light",
+      "value": "rgb(247, 245, 233)",
+      "description": "Primary color, pale white"
+    },
+    {
+      "name": "dark",
+      "value": "rgb(70, 70, 70)",
+      "description": "Primary color, pale black"
+    },
+    {
+      "name": "highlight",
+      "value": "rgb(112, 64, 255)",
+      "description": "Highlighting color, full blue"
+    },
+    {
+      "name": "shade",
+      "value": "rgb(205, 205, 205)",
+      "description": "Shadinging color, simple gray"
+    }
+  ],
   "color_pairs": [
     {
       "name": "dark-on-light",

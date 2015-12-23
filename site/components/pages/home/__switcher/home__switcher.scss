@@ -4,7 +4,7 @@
   right: $lem;
 
   .switcher {
-    @include text-style(large);
+    @include text-style(headline);
     cursor: pointer;
   }
 }
