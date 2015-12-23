@@ -1,13 +1,25 @@
 @mixin different-section {
+  display: flex;
+  flex-wrap: wrap;
   flex-basis: 100%;
-  padding: $lem * 2 $lem;
+  padding: 10vh $lem;
 
   @include border--thick(top);
   @include border--thick(bottom);
 
+  @include landscape {
+    flex-wrap: nowrap;
+  }
+
 
   &__description {
     @include text-style(body-text);
+    margin-bottom: $lem;
+
+    @include landscape {
+      margin-right: $lem;
+      margin-bottom: 0;
+    }
   }
 
   &__palette {

@@ -1,10 +1,27 @@
 @mixin different-section__palette {
-  display: flex;
-  
+  flex-basis: 100%;
+
+  @include mobile {
+    @include grid('.color-swatch', 2, 10, 10, $lem, $lem);
+  }
+
+  @include tablet {
+    @include grid('.color-swatch', 4, 10, 10, $lem, $lem);
+  }
+
+  @include laptop {
+    @include grid('.color-swatch', 4, 10, 10, $lem, $lem);
+  }
+
+  @include desktop {
+    @include grid('.color-swatch', 6, 10, 10, $lem, $lem);
+  }
+
   .color-swatch {
     &__value {
       width: $lem * 5;
       height: $lem * 5;
+      pointer-events: none;
     }
 
     &__button {
