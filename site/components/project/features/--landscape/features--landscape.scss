@@ -1,5 +1,5 @@
 @mixin features--landscape($nr_of_items) {
   @include landscape {
-    @include grid('article', 4, $nr_of_items, $nr_of_items, $lem, $lem);
+    @include grid('article', 3, $nr_of_items, $nr_of_items, $lem * 2, $lem * 2);
   }
 }
