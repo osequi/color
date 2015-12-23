@@ -1,0 +1,5 @@
+@mixin features--tablet($nr_of_items) {
+  @include tablet {
+    @include grid('article', 2, $nr_of_items, $nr_of_items, $lem, $lem);
+  }
+}

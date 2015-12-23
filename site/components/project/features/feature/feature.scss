@@ -1,15 +1,10 @@
 @mixin feature {
-  display: flex;
-  flex-direction: column;
-
   &__title {
     display: flex;
-    @include text-style(subtitle);
+    @include text-style(title);
   }
 
   &__description {
-    .text {
-      @include text-style(body-text);
-    }
+    @include text-style(body-text);
   }
 }
