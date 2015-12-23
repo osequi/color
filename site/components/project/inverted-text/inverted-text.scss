@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
 
-  padding: $lem;
-  max-width: 25em;
+  margin-top: $lem;
 
   .text1 {
     @include text-style(body-text);
     @include colors(white-on-black);
 
     padding: $lem;
+    max-width: calc(25em - #{$lem * 2});
 
     .ul {
       @include ul(underlined);

@@ -1,0 +1,32 @@
+@mixin hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: $lem 0;
+
+  @include mobile {
+    padding: $lem;
+  }
+
+  @include mobile-and-up {
+    @include fixed-width(90vw);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include desktop {
+    @include fixed-width(80vw);
+  }
+
+  .big-text {
+    @include big-text;
+  }
+
+  .inverted-text {
+    @include inverted-text;
+  }
+
+  .big-text,
+  .inverted-text {
+    max-width: 25em;
+  }
+}

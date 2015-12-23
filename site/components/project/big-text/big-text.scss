@@ -2,14 +2,12 @@
   display: flex;
   flex-direction: column;
 
-  padding: $lem;
-  max-width: 25em;
-
   .text1 {
     @include text-style(large);
   }
 
   .text2 {
+    @include text-style(body-text);
     @include text-style(title);
     margin: $lem 0;
   }

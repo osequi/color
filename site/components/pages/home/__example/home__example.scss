@@ -4,16 +4,10 @@
     display: flex;
   }
 
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
 
-  .big-text {
-    @include big-text;
-  }
-
-  .inverted-text {
-    @include inverted-text;
+  .hero {
+    @include hero;
   }
 
   .different-section {
