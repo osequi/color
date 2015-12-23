@@ -24,7 +24,7 @@ var colorSwatch = function(colorsID) {
     var color = this.previousElementSibling.value;
     this.previousElementSibling.style.backgroundColor = color;
 
-    if (this.parentNode.dataset.name == 'background') {
+    if (this.parentNode.dataset.name == 'light') {
       document.body.style.backgroundColor = color;
     }
   }

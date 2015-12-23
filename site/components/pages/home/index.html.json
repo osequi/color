@@ -2,10 +2,10 @@
   "title": "Home",
   "palette": [
     {
-      "name": "background"
+      "name": "light"
     },
     {
-      "name": "text"
+      "name": "dark"
     },
     {
       "name": "highlight"

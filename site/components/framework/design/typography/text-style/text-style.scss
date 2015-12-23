@@ -22,7 +22,7 @@ $text-block-width: 25em;
   @if ($variant == 'default') {
     @include font(nimbus-sans-regular);
     @include scale(default);
-    @include colors(cold-on-warm);
+    @include colors(dark-on-light);
     
     letter-spacing: 1.1px;
     
@@ -32,7 +32,7 @@ $text-block-width: 25em;
   // Inverted
   // - Inverted default text
   @if ($variant == 'inverted') {
-    @include colors(warm-on-cold);
+    @include colors(light-on-dark);
     
     
     
@@ -41,7 +41,7 @@ $text-block-width: 25em;
   // Contrast
   // - Contrast to default text
   @if ($variant == 'contrast') {
-    @include colors(cold-on-shade);
+    @include colors(dark-on-shade);
     
     
     
@@ -150,7 +150,7 @@ $text-block-width: 25em;
 .text-style--default {
   @include font(nimbus-sans-regular);
   @include scale(default);
-  @include colors(cold-on-warm);
+  @include colors(dark-on-light);
   
   letter-spacing: 1.1px;
   
@@ -158,14 +158,14 @@ $text-block-width: 25em;
 }
 
 .text-style--inverted {
-  @include colors(warm-on-cold);
+  @include colors(light-on-dark);
   
   
   
 }
 
 .text-style--contrast {
-  @include colors(cold-on-shade);
+  @include colors(dark-on-shade);
   
   
   

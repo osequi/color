@@ -1,12 +1,12 @@
 {
   "colors": [
     {
-      "name": "warm",
+      "name": "light",
       "value": "rgb(0, 203, 204)",
       "description": "Primary color"
     },
     {
-      "name": "cold",
+      "name": "dark",
       "value": "rgb(0, 0, 202)",
       "description": "Primary color"
     },
@@ -23,46 +23,33 @@
   ],
   "color_pairs": [
     {
-      "name": "cold-on-warm",
+      "name": "dark-on-light",
       "properties": [
         {
           "name": "color",
-          "value": "$cold"
+          "value": "$dark"
         },
         {
           "name": "background-color",
-          "value": "$warm"
+          "value": "$light"
         }
       ]
     },
     {
-      "name": "warm-on-cold",
+      "name": "light-on-dark",
       "properties": [
         {
           "name": "color",
-          "value": "$warm"
+          "value": "$light"
         },
         {
           "name": "background-color",
-          "value": "$cold"
+          "value": "$dark"
         }
       ]
     },
     {
-      "name": "highlight-on-warm",
-      "properties": [
-        {
-          "name": "color",
-          "value": "$highlight"
-        },
-        {
-          "name": "background-color",
-          "value": "$warm"
-        }
-      ]
-    },
-    {
-      "name": "highlight-on-cold",
+      "name": "highlight-on-light",
       "properties": [
         {
           "name": "color",
@@ -70,16 +57,29 @@
         },
         {
           "name": "background-color",
-          "value": "$cold"
+          "value": "$light"
         }
       ]
     },
     {
-      "name": "cold-on-highlight",
+      "name": "highlight-on-dark",
       "properties": [
         {
           "name": "color",
-          "value": "$cold"
+          "value": "$highlight"
+        },
+        {
+          "name": "background-color",
+          "value": "$dark"
+        }
+      ]
+    },
+    {
+      "name": "dark-on-highlight",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$dark"
         },
         {
           "name": "background-color",
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "name": "shade-on-warm",
+      "name": "shade-on-light",
       "properties": [
         {
           "name": "color",
@@ -96,16 +96,16 @@
         },
         {
           "name": "background-color",
-          "value": "$warm"
+          "value": "$light"
         }
       ]
     },
     {
-      "name": "cold-on-shade",
+      "name": "dark-on-shade",
       "properties": [
         {
           "name": "color",
-          "value": "$cold"
+          "value": "$dark"
         },
         {
           "name": "background-color",

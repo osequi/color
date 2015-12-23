@@ -7,7 +7,7 @@ html {
     @include text-style(default);
 
     a, .link {
-      @include link(highlight-on-warm);
+      @include link(highlight-on-light);
     }
   }
 }

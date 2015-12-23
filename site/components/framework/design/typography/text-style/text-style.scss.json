@@ -15,7 +15,7 @@
         },
         {
           "name": "colors",
-          "value": "cold-on-warm"
+          "value": "dark-on-light"
         }
       ],
       "properties": [
@@ -32,7 +32,7 @@
       "mixins": [
         {
           "name": "colors",
-          "value": "warm-on-cold"
+          "value": "light-on-dark"
         }
       ]
     },
@@ -43,7 +43,7 @@
       "mixins": [
         {
           "name": "colors",
-          "value": "cold-on-shade"
+          "value": "dark-on-shade"
         }
       ]
     },

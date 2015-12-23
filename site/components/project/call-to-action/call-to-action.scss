@@ -9,7 +9,7 @@
     padding-top: $lem;
 
     .button {
-      @include button(cold-on-highlight);
+      @include button(dark-on-highlight);
     }
   }
 
