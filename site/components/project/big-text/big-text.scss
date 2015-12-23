@@ -9,7 +9,7 @@
   .text2 {
     @include text-style(body-text);
     @include text-style(title);
-    margin: $lem 0;
+    margin-top: $lem;
   }
 
   .text3 {

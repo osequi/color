@@ -46,6 +46,8 @@ $text-block-width: 25em;
     @include border--thick;
     @include uppercase($lem / 8);
     
+    padding-bottom: $lem / 2;
+    margin-bottom: $lem / 2;
     
     
   }
@@ -150,6 +152,8 @@ $text-block-width: 25em;
   @include border--thick;
   @include uppercase($lem / 8);
   
+  padding-bottom: $lem / 2;
+  margin-bottom: $lem / 2;
   
   
 }

@@ -57,6 +57,16 @@
           "name": "uppercase",
           "value": "$lem / 8"
         }
+      ],
+      "properties": [
+        {
+          "name": "padding-bottom",
+          "value": "$lem / 2"
+        },
+        {
+          "name": "margin-bottom",
+          "value": "$lem / 2"
+        }
       ]
     },
     {
