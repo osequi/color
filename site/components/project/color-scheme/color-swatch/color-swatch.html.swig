@@ -3,4 +3,6 @@
 
   <input class="color-swatch__value" type="text">
   <button class="color-swatch__button" type="button">Edit</button>
+
+  <p class="color-swatch__pick">Pick from wheel</p>
 </aside>

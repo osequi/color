@@ -1,0 +1,50 @@
+@mixin color-swatch {
+  display: flex;
+  flex-direction: column;
+  padding: $lem;
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  &__value {
+    border: 1px solid;
+    margin-right: $lem / 2;
+    overflow: hidden;
+  }
+
+  &__button {
+    @include button;
+    display: none;
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__pick {
+    @include text-style(small-1);
+    color: $highlight;
+    display: none;
+  }
+
+
+  &--active {
+    .color-swatch__pick {
+      display: flex;
+    }
+  }
+
+  &.light {
+    border: 1px solid;
+  }
+
+  &.dark,
+  &.highlight,
+  &.highlight .color-swatch__pick {
+    color: $light;
+  }
+
+}

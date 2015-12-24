@@ -1,8 +1,0 @@
-@mixin color-tune__tuners {
-  display: flex;
-  flex-direction: column;
-
-  .tuner {
-    @include tuner;
-  }
-}

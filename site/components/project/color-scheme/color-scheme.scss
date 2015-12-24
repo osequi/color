@@ -1,5 +1,7 @@
 @mixin color-scheme {
-  &__palette {
-    @include color-scheme__palette;
+  @include grid('aside', 4, 4, 4, $lem, $lem, $lem * 2);
+
+  .color-swatch {
+    @include color-swatch;
   }
 }

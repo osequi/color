@@ -1,31 +1,20 @@
 @mixin home__color-generator {
+  @include grid('section', 2, 2, 2, $lem * 6, 0);
+  @include full-page;
+
   display: none;
   justify-content: center;
   align-items: center;
-  flex-basis: 0;
 
   &--active {
     display: flex;
   }
 
-  @include full-page;
-
   .color-wheel {
     @include color-wheel;
-    flex-grow: 2;
   }
 
-  .color-tune {
-    @include color-tune;
-  }
-
-  .color-scheme {
-    @include color-scheme;
-  }
-
-  .color-tune,
-  .color-scheme {
-    width: 20em;
-    padding: $lem;
+  .color-designer {
+    @include color-designer;
   }
 }

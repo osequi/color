@@ -1,9 +1,9 @@
 @mixin color-tune {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  margin-right: 0;
+  margin-top: $lem;
+  @include grid('aside', 2, 6, 6, $lem, $lem);
 
-  &__tuners {
-    @include color-tune__tuners;
+  .tuner {
+    @include tuner;
   }
 }

@@ -1,5 +1,7 @@
 <section class="color-tune">
   <h3>Color tune</h3>
 
-  {% include '__tuners/color-tune__tuners.html.swig' %}
+  {% for tuner in tuners %}
+    {% include 'tuner/tuner.html.swig' %}
+  {% endfor %}
 </section>

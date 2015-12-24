@@ -6,17 +6,17 @@
 //
 // Styleguide colors
 
-// Primary color
-$light: rgb(141, 105, 218);
+// Primary color, pale white
+$light: rgb(247, 245, 233);
 
-// Primary color
-$dark: #D7FFA7;
+// Primary color, pale black
+$dark: rgb(70, 70, 70);
 
-// Highlighting color
-$highlight: rgb(219, 105, 140);
+// Highlighting color, full blue
+$highlight: rgb(112, 64, 255);
 
-// Shadinging color
-$shade: rgb(141, 105, 218);
+// Shadinging color, simple gray
+$shade: rgb(205, 205, 205);
 
 
 // Color combinations. Colors are not used standalone but in pairs
@@ -75,19 +75,19 @@ $shade: rgb(141, 105, 218);
 // Color classes
 
 .light {
-  background: rgb(141, 105, 218);
+  background: rgb(247, 245, 233);
 };
 
 .dark {
-  background: #D7FFA7;
+  background: rgb(70, 70, 70);
 };
 
 .highlight {
-  background: rgb(219, 105, 140);
+  background: rgb(112, 64, 255);
 };
 
 .shade {
-  background: rgb(141, 105, 218);
+  background: rgb(205, 205, 205);
 };
 
 

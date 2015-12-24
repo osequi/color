@@ -2,28 +2,6 @@
   "colors": [
     {
       "name": "light",
-      "value": "rgb(141, 105, 218)",
-      "description": "Primary color"
-    },
-    {
-      "name": "dark",
-      "value": "#D7FFA7",
-      "description": "Primary color"
-    },
-    {
-      "name": "highlight",
-      "value": "rgb(219, 105, 140)",
-      "description": "Highlighting color"
-    },
-    {
-      "name": "shade",
-      "value": "rgb(141, 105, 218)",
-      "description": "Shadinging color"
-    }
-  ],
-  "colorsA": [
-    {
-      "name": "light",
       "value": "rgb(247, 245, 233)",
       "description": "Primary color, pale white"
     },
