@@ -7,16 +7,16 @@
 // Styleguide colors
 
 // Primary color
-$light: rgb(247, 245, 233);
+$light: rgb(141, 105, 218);
 
 // Primary color
-$dark: rgb(70, 70, 70);
+$dark: #D7FFA7;
 
 // Highlighting color
-$highlight: rgb(112, 64, 255);
+$highlight: rgb(219, 105, 140);
 
 // Shadinging color
-$shade: rgb(205, 205, 205);
+$shade: rgb(141, 105, 218);
 
 
 // Color combinations. Colors are not used standalone but in pairs
@@ -75,19 +75,19 @@ $shade: rgb(205, 205, 205);
 // Color classes
 
 .light {
-  background: rgb(247, 245, 233);
+  background: rgb(141, 105, 218);
 };
 
 .dark {
-  background: rgb(70, 70, 70);
+  background: #D7FFA7;
 };
 
 .highlight {
-  background: rgb(112, 64, 255);
+  background: rgb(219, 105, 140);
 };
 
 .shade {
-  background: rgb(205, 205, 205);
+  background: rgb(141, 105, 218);
 };
 
 
