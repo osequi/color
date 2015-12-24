@@ -1,0 +1,9 @@
+@mixin color-swatch__button {
+  @include button;
+  display: none;
+  margin: $lem / 2 0;
+
+  &--active {
+    display: flex;
+  }
+}

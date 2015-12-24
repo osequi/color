@@ -1,0 +1,5 @@
+@mixin color-swatch__pick {
+  @include text-style(small-1);
+  color: $highlight;
+  display: none;
+}

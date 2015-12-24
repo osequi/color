@@ -5,4 +5,6 @@
   <button class="color-swatch__button" type="button">Edit</button>
 
   <p class="color-swatch__pick">Pick from wheel</p>
+
+  {% include '__contrast/color-swatch__contrast.html.swig' %}
 </aside>
