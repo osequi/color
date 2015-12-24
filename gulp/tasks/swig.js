@@ -61,7 +61,9 @@ var _swig = function(source, dest, config, grabJSON) {
           // Load site-wide JSON settings
           site: require(config),
           // Load site-wide KSS file
-          kss: require(paths.kss_src)
+          kss: require(paths.kss_src),
+          // Colors
+          colors: require('../../site/components/framework/design/colors/colors.scss.json')
         }
       }
     }))

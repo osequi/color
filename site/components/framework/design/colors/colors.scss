@@ -70,6 +70,48 @@ $shade: rgb(205, 205, 205);
     
   }
 
+  @if ($name == 'light-on-highlight') {
+    color: $light;
+    background-color: $highlight;
+    
+  }
+
+  @if ($name == 'dark-on-highlight') {
+    color: $dark;
+    background-color: $highlight;
+    
+  }
+
+  @if ($name == 'shade-on-highlight') {
+    color: $shade;
+    background-color: $highlight;
+    
+  }
+
+  @if ($name == 'light-on-shade') {
+    color: $light;
+    background-color: $shade;
+    
+  }
+
+  @if ($name == 'dark-on-shade') {
+    color: $dark;
+    background-color: $shade;
+    
+  }
+
+  @if ($name == 'highlight-on-shade') {
+    color: $highlight;
+    background-color: $shade;
+    
+  }
+
+  @if ($name == 'shade-on-dark') {
+    color: $shade;
+    background-color: $dark;
+    
+  }
+
 }
 
 // Color classes
@@ -138,6 +180,48 @@ $shade: rgb(205, 205, 205);
 .dark-on-shade {
   color: $dark;
   background-color: $shade;
+  
+}
+
+.light-on-highlight {
+  color: $light;
+  background-color: $highlight;
+  
+}
+
+.dark-on-highlight {
+  color: $dark;
+  background-color: $highlight;
+  
+}
+
+.shade-on-highlight {
+  color: $shade;
+  background-color: $highlight;
+  
+}
+
+.light-on-shade {
+  color: $light;
+  background-color: $shade;
+  
+}
+
+.dark-on-shade {
+  color: $dark;
+  background-color: $shade;
+  
+}
+
+.highlight-on-shade {
+  color: $highlight;
+  background-color: $shade;
+  
+}
+
+.shade-on-dark {
+  color: $shade;
+  background-color: $dark;
   
 }
 

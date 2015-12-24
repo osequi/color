@@ -3,6 +3,8 @@
   flex-direction: column;
   padding: $lem;
 
+  position: relative;
+
   &__name {
     @include color-swatch__name;
   }

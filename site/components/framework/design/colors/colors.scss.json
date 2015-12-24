@@ -125,6 +125,97 @@
           "value": "$shade"
         }
       ]
+    },
+    {
+      "name": "light-on-highlight",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$light"
+        },
+        {
+          "name": "background-color",
+          "value": "$highlight"
+        }
+      ]
+    },
+    {
+      "name": "dark-on-highlight",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$dark"
+        },
+        {
+          "name": "background-color",
+          "value": "$highlight"
+        }
+      ]
+    },
+    {
+      "name": "shade-on-highlight",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$shade"
+        },
+        {
+          "name": "background-color",
+          "value": "$highlight"
+        }
+      ]
+    },
+    {
+      "name": "light-on-shade",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$light"
+        },
+        {
+          "name": "background-color",
+          "value": "$shade"
+        }
+      ]
+    },
+    {
+      "name": "dark-on-shade",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$dark"
+        },
+        {
+          "name": "background-color",
+          "value": "$shade"
+        }
+      ]
+    },
+    {
+      "name": "highlight-on-shade",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$highlight"
+        },
+        {
+          "name": "background-color",
+          "value": "$shade"
+        }
+      ]
+    },
+    {
+      "name": "shade-on-dark",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$shade"
+        },
+        {
+          "name": "background-color",
+          "value": "$dark"
+        }
+      ]
     }
   ]
 }

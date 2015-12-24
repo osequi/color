@@ -1,2 +1,4 @@
 @mixin color-swatch__contrast {
+  position: absolute;
+  top: $lem * 7;
 }
