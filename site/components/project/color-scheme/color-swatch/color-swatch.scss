@@ -11,13 +11,15 @@
 
   &__value {
     border: 1px solid;
-    margin-right: $lem / 2;
     overflow: hidden;
+    width: calc(100% - #{$lem / 2} - 2px);
+    padding: $lem / 4;
   }
 
   &__button {
     @include button;
     display: none;
+    margin: $lem / 2 0;
 
     &--active {
       display: flex;
