@@ -14,10 +14,6 @@ html {
       .home__switcher {
         @include home__switcher;
       }
-
-      .color-codes {
-        display: none;
-      }
     }
   }
 }
