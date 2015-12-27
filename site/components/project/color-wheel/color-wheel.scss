@@ -2,4 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
+
+  // if this is changed also the generator JS must be changed
+  $nr_of_circles: 3;
+  $circle-width: 30px;
+
+  &__circle {
+    position: absolute;
+
+    @for $i from 1 through $nr_of_circles {
+      &--#{$i} {
+        top: ($nr_of_circles - $i) * 45px;
+        margin-left: ($nr_of_circles - $i) * 45px;
+        z-index: $nr_of_circles - $i;
+      }
+    }
+  }
 }

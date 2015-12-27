@@ -1,23 +1,17 @@
 // http://zeroviscosity.com/d3-js-step-by-step/step-1-a-basic-pie-chart
-var createColorWheel = function() {
+var createColorWheel = function(circleID, dataset, index) {
   'use strict';
 
-  var dataset = [
-    { label: 'Abulia', count: 10 },
-    { label: 'Betelgeuse', count: 10 },
-    { label: 'Cantaloupe', count: 10 },
-    { label: 'Abulia', count: 10 },
-    { label: 'Betelgeuse', count: 10 },
-    { label: 'Cantaloupe', count: 10 }
-  ];
+  // If these are changed also the css must be updated to ovrelap circles
+  var sliceWidth = 90;
 
-  var width = 360;
-  var height = 360;
+  var width = index * sliceWidth;
+  var height = width;
   var radius = Math.min(width, height) / 2;
 
   var color = d3.scale.category20b();
 
-  var svg = d3.select('.color-wheel__circle')
+  var svg = d3.select(circleID)
     .append('svg')
     .attr('class', 'svg')
     .attr('width', width)
@@ -44,4 +38,36 @@ var createColorWheel = function() {
     });
 };
 
-createColorWheel();
+var dataset = [
+  { label: 'Abulia', count: 10 },
+  { label: 'Betelgeuse', count: 10 },
+  { label: 'Cantaloupe', count: 10 }
+];
+createColorWheel('.color-wheel__circle--1', dataset, 1);
+
+var dataset = [
+  { label: 'Abulia', count: 10 },
+  { label: 'Betelgeuse', count: 10 },
+  { label: 'Cantaloupe', count: 10 },
+  { label: 'Abulia', count: 10 },
+  { label: 'Betelgeuse', count: 10 },
+  { label: 'Cantaloupe', count: 10 }
+];
+createColorWheel('.color-wheel__circle--2', dataset, 2);
+
+
+var dataset = [
+  { label: 'Abulia', count: 10 },
+  { label: 'Betelgeuse', count: 10 },
+  { label: 'Cantaloupe', count: 10 },
+  { label: 'Abulia', count: 10 },
+  { label: 'Betelgeuse', count: 10 },
+  { label: 'Cantaloupe', count: 10 },
+  { label: 'Abulia', count: 10 },
+  { label: 'Betelgeuse', count: 10 },
+  { label: 'Cantaloupe', count: 10 },
+  { label: 'Abulia', count: 10 },
+  { label: 'Betelgeuse', count: 10 },
+  { label: 'Cantaloupe', count: 10 }
+];
+createColorWheel('.color-wheel__circle--3', dataset, 3);
