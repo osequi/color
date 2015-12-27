@@ -15,6 +15,9 @@
         "file": "chroma.min.js"
       },
       {
+        "file": "d3.min.js"
+      },
+      {
         "file": "site.min.js"
       }
     ]

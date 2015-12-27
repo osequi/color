@@ -1,19 +1,5 @@
-// http://codepen.io/shankarcabus/pen/jcyDA
-
 @mixin color-wheel {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &__circles {
-    position: relative;
-
-    $nr_of_wheels: 7;
-    $circle_size: $lem * 8;
-    $circle_size_growth: 8;
-
-    .color-circle {
-      @include color-circle($nr_of_wheels, $circle_size, $circle_size_growth);
-    }
-  }
 }
