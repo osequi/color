@@ -11,13 +11,5 @@
 
   &__circle {
     position: absolute;
-
-    @for $i from 1 through $nr_of_circles {
-      &--#{$i} {
-        top: ($nr_of_circles - $i) * 45px;
-        margin-left: ($nr_of_circles - $i) * 45px;
-        z-index: $nr_of_circles - $i;
-      }
-    }
   }
 }
