@@ -5,11 +5,13 @@
 
   position: relative;
 
-  // if this is changed also the generator JS must be changed
-  $nr_of_circles: 3;
-  $circle-width: 30px;
-
   &__circle {
     position: absolute;
+
+    .svg {
+      .slice {
+        cursor: pointer;
+      }
+    }
   }
 }

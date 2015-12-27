@@ -21,9 +21,6 @@ var clickColorWheel = function(circleID) {
 var createColorWheel = function(circleID, dataset, index) {
   'use strict';
 
-  // If these are changed also the css must be updated to ovrelap circles
-  var sliceWidth = 90;
-
   var width = index * sliceWidth;
   var height = width;
   var radius = Math.min(width, height) / 2;
@@ -86,20 +83,21 @@ var colorWheel = function(colorWheelID) {
     wheel.setAttribute('class', 'color-wheel__circle color-wheel__circle--'  + index);
 
     wheel.style.zIndex = total - index;
-    wheel.style.top = (total - index) * 45 + "px";
-    wheel.style.marginLeft = (total - index) * 45 + "px";
+    wheel.style.top = (total - index) * sliceWidth / 2 + "px";
+    wheel.style.marginLeft = (total - index) * sliceWidth / 2 + "px";
 
     container.appendChild(wheel);
   }
 
 
   // Center the color wheel
-  container.style.top = "-" + (wheels.length + 1) * 45 + "px";
-  container.style.left = "-" + (wheels.length + 1) * 45 + "px";
+  container.style.top = "-" + (wheels.length + 1) * sliceWidth / 2 + "px";
+  container.style.left = "-" + (wheels.length + 1) * sliceWidth / 2 + "px";
 }
 
 
 // Draw wheels
+var sliceWidth = 120;
 var wheels = [3, 3, 6, 12, 24, 48, 96];
 colorWheel('.color-wheel');
 
