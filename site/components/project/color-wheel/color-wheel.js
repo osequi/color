@@ -53,7 +53,7 @@ function colorsNewPalette(colors) {
 // Generate a color for a slice
 function generateSliceColor(sliceIndex, index) {
   var model = document.querySelector('.color-wheel__models .color-model').value;
-  var colors = ["#0000ff", "#00ff00", "#ff0000"];
+  var colors = ["blue", "green", "red"];
 
   if (index == 1) {
     return chroma(colors[sliceIndex]);
