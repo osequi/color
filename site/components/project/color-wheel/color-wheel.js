@@ -42,12 +42,12 @@ function colorsNewPalette(colors, colorModel) {
   }
 
   for (var i = 0; i < colors.length - 1; i++) {
-    var color1 = chroma(colors[i]);
-    var color2 = chroma(colors[i + 1]);
-    var mixed = chroma.mix(color1, color2, 0.5, colorModel);
-
-    if ((colorModel == "rgb") && (colors[i] == 'blue') && (colors[i+1] == 'yellow')) {
-      var mixed = chroma.mix(color1, color2, 0.5, 'hsl');
+    if ((colorModel == "rgb") && (colors.length == 4) && (i == 0)) {
+      var mixed = chroma("#0f0");
+    } else {
+      var color1 = chroma(colors[i]);
+      var color2 = chroma(colors[i + 1]);
+      var mixed = chroma.mix(color1, color2, 0.5, colorModel);
     }
 
     newColors.push(mixed);
@@ -67,10 +67,10 @@ function primaryColorsFromModel(colorModel) {
     case 'lab':
     case 'lch':
     case 'hcl':
-      return ["blue", "yellow", "red"];
+      return ["#00f", "#ff0", "#f00"];
       break;
     case 'rgb':
-      return ["blue", "green", "red"];
+      return ["#00f", "#0f0", "#f00"];
       break;
   }
 }
@@ -138,11 +138,8 @@ var createColorWheel = function(circleID, dataset, index, colorModel) {
 // Generate all wheels
 var colorWheel = function(colorWheelID) {
   var container = document.querySelector(colorWheelID);
-
-  // Remove existing wheels
   var wheelsContainer = container.querySelector('.wheels');
-  wheelsContainer.innerHTML = '';
-
+  
   // Which color model to use
   var colorModel = document.querySelector('.color-wheel__models .color-model').value;
 
