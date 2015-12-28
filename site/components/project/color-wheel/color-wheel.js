@@ -1,22 +1,75 @@
-// Click on a slice on a wheel
-var clickColorWheel = function(circleID) {
-  var circle = document.querySelector(circleID);
+// Merging two arrays
+// - (b, y, r) + (g, o, v) => (b, g, y, o, r, v)
+function colorsNewArraysMerge(array1, array2) {
+  mergeColors = [];
 
-  var slices = circle.querySelectorAll('.slice');
-
-  for (i = 0; i < slices.length; i++) {
-    slices[i].addEventListener('click', click, false);
+  for (var i = 0; i < array1.length; i++ ) {
+    mergeColors.push(array1[i]);
+    mergeColors.push(array2[i])
   }
 
-  function click() {
-    var color = getComputedStyle(this).getPropertyValue("fill")
-    document.body.style.backgroundColor = color;
+  return mergeColors;
+}
+
+
+// Generate an array of colors to be mixed
+// - returns an array of all combined colors from previous steps
+// - (r, g, b) => (r, g, b, r)
+function colorsNewArray(colors, index) {
+  var allColors = colors;
+
+  for (i = 2; i < index; i++) {
+    var allColors2 = allColors.slice();
+    allColors2.push(colors[0]);
+
+    var newColors = colorsNewPalette(allColors2);
+    allColors = colorsNewArraysMerge(allColors, newColors);
   }
-};
+
+  allColors.push(colors[0]);
+
+  return allColors;
+}
+
+
+// Returns a new set of colors
+// - (b, y, r, b) => (b+y = g, y+r = o, r+b = v)
+function colorsNewPalette(colors) {
+  var newColors = [];
+
+  for (var i = 0; i < colors.length - 1; i++) {
+    var color1 = chroma(colors[i]);
+    var color2 = chroma(colors[i + 1]);
+    var mixed = chroma.mix(color1, color2, 0.5)
+
+    newColors.push(mixed);
+  }
+  
+  return newColors;
+}
 
 
 
-// Generate a single wheel withd D3.js
+// Generate a color for a slice
+function generateSliceColor(sliceIndex, index) {
+  var model = document.querySelector('.color-wheel__models .color-model').value;
+  var colors = ["#0000ff", "#ffff00", "#ff0000"];
+
+  if (index == 1) {
+    return chroma(colors[sliceIndex]);
+  } else {
+    // Combine all colors into a new array
+    var colors = colorsNewArray(colors, index);
+
+    // Generate new colors from the combined array
+    palette = colorsNewPalette(colors);
+    return palette[sliceIndex];
+  }
+}
+
+
+
+// Generate a single wheel with D3.js
 // - http://zeroviscosity.com/d3-js-step-by-step/step-1-a-basic-pie-chart
 var createColorWheel = function(circleID, dataset, index) {
   'use strict';
@@ -50,7 +103,7 @@ var createColorWheel = function(circleID, dataset, index) {
     .attr('class', 'slice')
     .attr('d', arc)
     .attr('fill', function(d, i) {
-      return color(d.data.label);
+      return generateSliceColor(i, index);
     });
 };
 
@@ -108,6 +161,24 @@ var colorWheel = function(colorWheelID) {
   layers.innerHTML = "Select wheel: " + steps;
   container.appendChild(layers);
 }
+
+
+
+// Click on a slice on a wheel & pick it's color
+var clickColorWheel = function(circleID) {
+  var circle = document.querySelector(circleID);
+
+  var slices = circle.querySelectorAll('.slice');
+
+  for (i = 0; i < slices.length; i++) {
+    slices[i].addEventListener('click', click, false);
+  }
+
+  function click() {
+    var color = getComputedStyle(this).getPropertyValue("fill")
+    document.body.style.backgroundColor = color;
+  }
+};
 
 
 // Draw wheels

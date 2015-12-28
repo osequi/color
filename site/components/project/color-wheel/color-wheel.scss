@@ -12,4 +12,8 @@
   &__select {
     @include color-wheel__select;
   }
+
+  &__models {
+    @include color-wheel__models;
+  }
 }
