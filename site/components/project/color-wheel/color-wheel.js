@@ -40,11 +40,11 @@ function colorsNewPalette(colors) {
   for (var i = 0; i < colors.length - 1; i++) {
     var color1 = chroma(colors[i]);
     var color2 = chroma(colors[i + 1]);
-    var mixed = chroma.mix(color1, color2, 0.5)
+    var mixed = chroma.mix(color1, color2, 0.5, 'rgb');
 
     newColors.push(mixed);
   }
-  
+
   return newColors;
 }
 
@@ -53,7 +53,7 @@ function colorsNewPalette(colors) {
 // Generate a color for a slice
 function generateSliceColor(sliceIndex, index) {
   var model = document.querySelector('.color-wheel__models .color-model').value;
-  var colors = ["#0000ff", "#ffff00", "#ff0000"];
+  var colors = ["#0000ff", "#00ff00", "#ff0000"];
 
   if (index == 1) {
     return chroma(colors[sliceIndex]);
