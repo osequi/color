@@ -34,13 +34,21 @@ function colorsNewArray(colors, index) {
 
 // Returns a new set of colors
 // - (b, y, r, b) => (b+y = g, y+r = o, r+b = v)
-function colorsNewPalette(colors) {
+function colorsNewPalette(colors, colorModel) {
   var newColors = [];
+
+  if (colorModel == "ryb") {
+    colorModel = "rgb";
+  }
 
   for (var i = 0; i < colors.length - 1; i++) {
     var color1 = chroma(colors[i]);
     var color2 = chroma(colors[i + 1]);
-    var mixed = chroma.mix(color1, color2, 0.5, 'rgb');
+    var mixed = chroma.mix(color1, color2, 0.5, colorModel);
+
+    if ((colorModel == "rgb") && (colors[i] == 'blue') && (colors[i+1] == 'yellow')) {
+      var mixed = chroma.mix(color1, color2, 0.5, 'hsl');
+    }
 
     newColors.push(mixed);
   }
@@ -49,11 +57,30 @@ function colorsNewPalette(colors) {
 }
 
 
+// Return the primary colors for a given color model
+function primaryColorsFromModel(colorModel) {
+  switch (colorModel) {
+    case 'ryb':
+    case 'hsl':
+    case 'hsv':
+    case 'hsi':
+    case 'lab':
+    case 'lch':
+    case 'hcl':
+      return ["blue", "yellow", "red"];
+      break;
+    case 'rgb':
+      return ["blue", "green", "red"];
+      break;
+  }
+}
+
+
 
 // Generate a color for a slice
-function generateSliceColor(sliceIndex, index) {
+function generateSliceColor(sliceIndex, index, colorModel) {
   var model = document.querySelector('.color-wheel__models .color-model').value;
-  var colors = ["blue", "green", "red"];
+  var colors = primaryColorsFromModel(colorModel);
 
   if (index == 1) {
     return chroma(colors[sliceIndex]);
@@ -62,7 +89,7 @@ function generateSliceColor(sliceIndex, index) {
     var colors = colorsNewArray(colors, index);
 
     // Generate new colors from the combined array
-    palette = colorsNewPalette(colors);
+    palette = colorsNewPalette(colors, colorModel);
     return palette[sliceIndex];
   }
 }
@@ -71,7 +98,7 @@ function generateSliceColor(sliceIndex, index) {
 
 // Generate a single wheel with D3.js
 // - http://zeroviscosity.com/d3-js-step-by-step/step-1-a-basic-pie-chart
-var createColorWheel = function(circleID, dataset, index) {
+var createColorWheel = function(circleID, dataset, index, colorModel) {
   'use strict';
 
   var width = index * sliceWidth;
@@ -103,7 +130,7 @@ var createColorWheel = function(circleID, dataset, index) {
     .attr('class', 'slice')
     .attr('d', arc)
     .attr('fill', function(d, i) {
-      return generateSliceColor(i, index);
+      return generateSliceColor(i, index, colorModel);
     });
 };
 
@@ -112,21 +139,29 @@ var createColorWheel = function(circleID, dataset, index) {
 var colorWheel = function(colorWheelID) {
   var container = document.querySelector(colorWheelID);
 
+  // Remove existing wheels
+  var wheelsContainer = container.querySelector('.wheels');
+  wheelsContainer.innerHTML = '';
+
+  // Which color model to use
+  var colorModel = document.querySelector('.color-wheel__models .color-model').value;
+
+  // Draw wheels
   for (var i = 0; i < wheels.length; i++) {
     createColorWheelDiv(i + 1, wheels.length + 1);
-    drawColorWheel(i + 1, wheels[i]);
+    drawColorWheel(i + 1, wheels[i], colorModel);
   }
 
 
   // Prepare dataset and draw a wheel
-  function drawColorWheel(index, slices) {
+  function drawColorWheel(index, slices, colorModel) {
     var dataset = [];
 
     for (var i = 0; i < slices; i++) {
       dataset.push({ label: 'label' + i, count: 10 });
     }
 
-    createColorWheel('.color-wheel__circle--' + index, dataset, index);
+    createColorWheel('.color-wheel__circle--' + index, dataset, index, colorModel);
   }
 
 
@@ -139,7 +174,7 @@ var colorWheel = function(colorWheelID) {
     wheel.style.top = (total - index) * sliceWidth / 2 + "px";
     wheel.style.marginLeft = (total - index) * sliceWidth / 2 + "px";
 
-    container.appendChild(wheel);
+    wheelsContainer.appendChild(wheel);
   }
 
 
@@ -167,7 +202,6 @@ var colorWheel = function(colorWheelID) {
 // Click on a slice on a wheel & pick it's color
 var clickColorWheel = function(circleID) {
   var circle = document.querySelector(circleID);
-
   var slices = circle.querySelectorAll('.slice');
 
   for (i = 0; i < slices.length; i++) {
@@ -175,6 +209,7 @@ var clickColorWheel = function(circleID) {
   }
 
   function click() {
+    console.log('click');
     var color = getComputedStyle(this).getPropertyValue("fill")
     document.body.style.backgroundColor = color;
   }
