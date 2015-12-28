@@ -5,7 +5,7 @@ var colorModelChange = function(colorModelSelectorID) {
 
   function click() {
     // Remove existing wheels
-    var wheelsContainer = document.querySelector('.color-wheel .wheels');
+    var wheelsContainer = document.querySelector('.color-wheel__wheels');
     wheelsContainer.innerHTML = '';
 
     // Draw new wheel

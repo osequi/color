@@ -138,8 +138,8 @@ var createColorWheel = function(circleID, dataset, index, colorModel) {
 // Generate all wheels
 var colorWheel = function(colorWheelID) {
   var container = document.querySelector(colorWheelID);
-  var wheelsContainer = container.querySelector('.wheels');
-  
+  var wheelsContainer = container.querySelector('.color-wheel__wheels');
+
   // Which color model to use
   var colorModel = document.querySelector('.color-wheel__models .color-model').value;
 
