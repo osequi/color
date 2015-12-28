@@ -1,0 +1,18 @@
+@mixin color-wheel__circle {
+  position: absolute;
+
+  &--2 {
+    transform: rotate(60deg);
+  }
+
+  &--selected {
+    z-index: 10 !important;
+  }
+
+
+  .svg {
+    .slice {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@mixin color-wheel__select {
+  position: absolute;
+
+  .layer {
+    cursor: pointer;
+
+    + .layer {
+      margin-left: $lem / 4;
+    }
+
+    &--selected {
+      font-weight: bold;
+    }
+  }
+}

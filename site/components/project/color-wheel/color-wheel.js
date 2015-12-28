@@ -16,7 +16,7 @@ var clickColorWheel = function(circleID) {
 
 
 
-// Generate a single wheel
+// Generate a single wheel withd D3.js
 // - http://zeroviscosity.com/d3-js-step-by-step/step-1-a-basic-pie-chart
 var createColorWheel = function(circleID, dataset, index) {
   'use strict';
@@ -93,6 +93,20 @@ var colorWheel = function(colorWheelID) {
   // Center the color wheel
   container.style.top = "-" + (wheels.length + 1) * sliceWidth / 2 + "px";
   container.style.left = "-" + (wheels.length + 1) * sliceWidth / 2 + "px";
+
+
+  // Add layer navigation to enable color picking on overlapping layers
+  var layers = document.createElement('div');
+  layers.setAttribute('class', 'color-wheel__select');
+  layers.style.left = (wheels.length + 1) * sliceWidth / 2 + "px";
+
+  var steps = '';
+  for (var i=0; i < wheels.length; i++) {
+    steps += '<span class="layer" data-index="' + (wheels.length - i - 1) +'">' + (i + 1) + '</span>';
+  }
+
+  layers.innerHTML = "Select wheel: " + steps;
+  container.appendChild(layers);
 }
 
 

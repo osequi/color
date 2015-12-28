@@ -6,12 +6,10 @@
   position: relative;
 
   &__circle {
-    position: absolute;
+    @include color-wheel__circle;
+  }
 
-    .svg {
-      .slice {
-        cursor: pointer;
-      }
-    }
+  &__select {
+    @include color-wheel__select;
   }
 }
