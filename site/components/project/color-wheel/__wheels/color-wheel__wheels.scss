@@ -1,0 +1,8 @@
+@mixin color-wheel__wheels {
+  position: relative;
+  left: -150px;
+
+  .wheel {
+    @include wheel;
+  }
+}

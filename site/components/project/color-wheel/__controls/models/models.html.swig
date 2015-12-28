@@ -1,5 +1,5 @@
-<aside class="color-wheel__models">
-  <h3>Select color model</h3>
+<aside class="models">
+  <h3 class="models__title">Color model</h3>
 
   <select class="color-model">
     {% for model in color_models %}

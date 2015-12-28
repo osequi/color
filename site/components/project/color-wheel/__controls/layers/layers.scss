@@ -1,6 +1,4 @@
-@mixin color-wheel__select {
-  position: absolute;
-
+@mixin layers {
   .layer {
     cursor: pointer;
 

@@ -1,19 +1,16 @@
 @mixin color-wheel {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
 
-  position: relative;
+  height: 100vh;
+  margin-right: 0 !important;
 
-  &__circle {
-    @include color-wheel__circle;
+  &__controls {
+    @include color-wheel__controls;
   }
 
-  &__select {
-    @include color-wheel__select;
-  }
-
-  &__models {
-    @include color-wheel__models;
+  &__wheels {
+    @include color-wheel__wheels;
   }
 }

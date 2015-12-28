@@ -1,0 +1,18 @@
+@mixin color-wheel__controls {
+  @include grid('aside', 3, 3, 3, $lem, 0);
+
+  justify-content: space-between;
+  margin-right: 0 !important;
+
+  .layers {
+    @include layers;
+  }
+
+  .primaries {
+    @include primaries;
+  }
+
+  .models {
+    @include models;
+  }
+}
