@@ -1,9 +1,10 @@
 @mixin color-tune {
   margin-right: 0;
   margin-top: $lem;
+
   @include grid('aside', 2, 6, 6, $lem, $lem);
 
-  .tuner {
-    @include tuner;
+  .drag-dial {
+    @include drag-dial;
   }
 }
