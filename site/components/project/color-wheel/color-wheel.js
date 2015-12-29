@@ -3,7 +3,6 @@ var sliceWidth = 120;
 var wheels = [3, 3, 6, 12, 24, 48, 96];
 
 
-
 // Merging two arrays
 // - (b, y, r) + (g, o, v) => (b, g, y, o, r, v)
 function colorsNewArraysMerge(array1, array2) {
@@ -21,14 +20,14 @@ function colorsNewArraysMerge(array1, array2) {
 // Generate an array of colors to be mixed
 // - returns an array of all combined colors from previous steps
 // - (r, g, b) => (r, g, b, r)
-function colorsNewArray(colors, index) {
+function colorsNewArray(colors, index, colorModel) {
   var allColors = colors;
 
   for (i = 2; i < index; i++) {
     var allColors2 = allColors.slice();
     allColors2.push(colors[0]);
 
-    var newColors = colorsNewPalette(allColors2);
+    var newColors = colorsNewPalette(allColors2, colorModel);
     allColors = colorsNewArraysMerge(allColors, newColors);
   }
 
@@ -43,16 +42,15 @@ function colorsNewArray(colors, index) {
 function colorsNewPalette(colors, colorModel) {
   var newColors = [];
 
-  if (colorModel == "ryb") {
-    colorModel = "rgb";
-  }
-
   for (var i = 0; i < colors.length - 1; i++) {
-    if ((colorModel == "rgb") && (colors.length == 4) && (i == 0)) {
+    var color1 = chroma(colors[i]);
+    var color2 = chroma(colors[i + 1]);
+
+    // One exception:
+    // - when mixing blue with yellow the result should be green instead of gray in the RGB color space
+    if ((color1.hex() == "#0000ff") && (color2.hex() == "#ffff00") && (colorModel == "rgb")) {
       var mixed = chroma("#0f0");
     } else {
-      var color1 = chroma(colors[i]);
-      var color2 = chroma(colors[i + 1]);
       var mixed = chroma.mix(color1, color2, 0.5, colorModel);
     }
 
@@ -73,7 +71,7 @@ function primaryColors(colorPrimaries) {
       return ["#00f", "#0f0", "#f00"];
       break;
     case 'cmyk':
-      return ["cyan", "magenta", "yellow"];
+      return ["#0ff", "#ff0", "#f0f"];
       break;
   }
 }
@@ -89,10 +87,10 @@ function generateSliceColor(sliceIndex, index, colorModel, colorPrimaries) {
     return chroma(colors[sliceIndex]);
   } else {
     // Combine all colors into a new array
-    var colors = colorsNewArray(colors, index);
+    var colors = colorsNewArray(colors, index, colorModel);
 
     // Generate new colors from the combined array
-    palette = colorsNewPalette(colors, colorModel);
+    palette = colorsNewPalette(colors, colorModel, colorPrimaries);
     return palette[sliceIndex];
   }
 }
