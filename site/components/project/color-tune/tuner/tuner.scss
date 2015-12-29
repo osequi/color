@@ -1,27 +1,17 @@
 @mixin tuner {
-  margin-bottom: $lem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__title {
     display: flex;
-    @include text-style(title);
-  }
-
-  &__range {
-    @include tuner__range;
+    order: 2;
   }
 
   &__radio {
     @include tuner__radio;
+    order: 3;
   }
-}
 
-
-// Fixing the color picker
-.sp-picker-container, .sp-palette-container {
-  float: right !important;
-}
-
-.sp-picker-container,
-.sp-input-container {
-  width: 300px !important;
+  @include tuner__picker;
 }

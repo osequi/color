@@ -99,51 +99,206 @@
   <h3>Color tune</h3>
 
   
-    <aside class="drag-dial">
-  <h3 class="drag-dial__title">Tint</h3>
+    <aside class="tuner" data-color="#ffffff">
+  <h3 class="tuner__title">Lighten</h3>
 
-  <div id="drag-dial__control"></div>
-  <div id="drag_dial__value"></div>
+  
+  <input type="text" class="knob" data-min="0" data-max="100" value="0">
+
+
+  
 </aside>
 
   
-    <aside class="drag-dial">
-  <h3 class="drag-dial__title">Shade</h3>
+    <aside class="tuner" data-color="#000000">
+  <h3 class="tuner__title">Darken</h3>
 
-  <div id="drag-dial__control"></div>
-  <div id="drag_dial__value"></div>
+  
+  <input type="text" class="knob" data-min="0" data-max="100" value="0">
+
+
+  
 </aside>
 
   
-    <aside class="drag-dial">
-  <h3 class="drag-dial__title">Tone</h3>
+    <aside class="tuner" data-color="#cccccc">
+  <h3 class="tuner__title">Saturate</h3>
 
-  <div id="drag-dial__control"></div>
-  <div id="drag_dial__value"></div>
+  
+  <input type="text" class="knob" data-min="0" data-max="100" value="0">
+
+
+  
 </aside>
 
   
-    <aside class="drag-dial">
-  <h3 class="drag-dial__title">Luminance</h3>
+    <aside class="tuner" data-color="#cccccc">
+  <h3 class="tuner__title">Desaturate</h3>
 
-  <div id="drag-dial__control"></div>
-  <div id="drag_dial__value"></div>
+  
+  <input type="text" class="knob" data-min="0" data-max="100" value="0">
+
+
+  
 </aside>
 
   
-    <aside class="drag-dial">
-  <h3 class="drag-dial__title">Mix</h3>
+    <aside class="tuner" data-color="#cc99cc">
+  <h3 class="tuner__title">Luminance</h3>
 
-  <div id="drag-dial__control"></div>
-  <div id="drag_dial__value"></div>
+  
+  <input type="text" class="knob" data-min="0" data-max="100" value="0">
+
+
+  
+    <aside class="tuner__radio">
+  <h3>Radio input</h3>
+
+  
+    <div class="container">
+      <input class="radio" type="radio" name="luminance" value="rgb"  checked="checked" >
+      <span class="label">rgb</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="luminance" value="hsl" >
+      <span class="label">hsl</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="luminance" value="hsv" >
+      <span class="label">hsv</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="luminance" value="hsi" >
+      <span class="label">hsi</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="luminance" value="lab" >
+      <span class="label">lab</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="luminance" value="lch" >
+      <span class="label">lch</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="luminance" value="hcl" >
+      <span class="label">hcl</span>
+    </div>
+  
 </aside>
 
   
-    <aside class="drag-dial">
-  <h3 class="drag-dial__title">Blend</h3>
+</aside>
 
-  <div id="drag-dial__control"></div>
-  <div id="drag_dial__value"></div>
+  
+    <aside class="tuner" data-color="#cc99cc">
+  <h3 class="tuner__title">Mix</h3>
+
+  
+  <input type="text" class="knob" data-min="0" data-max="100" value="0">
+
+
+  
+    <aside class="tuner__radio">
+  <h3>Radio input</h3>
+
+  
+    <div class="container">
+      <input class="radio" type="radio" name="mix" value="rgb"  checked="checked" >
+      <span class="label">rgb</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="mix" value="hsl" >
+      <span class="label">hsl</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="mix" value="hsv" >
+      <span class="label">hsv</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="mix" value="hsi" >
+      <span class="label">hsi</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="mix" value="lab" >
+      <span class="label">lab</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="mix" value="lch" >
+      <span class="label">lch</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="mix" value="hcl" >
+      <span class="label">hcl</span>
+    </div>
+  
+</aside>
+
+  
+</aside>
+
+  
+    <aside class="tuner" data-color="3c990c">
+  <h3 class="tuner__title">Blend</h3>
+
+  
+  <input type="text" class="knob" data-min="0" data-max="100" value="0">
+
+
+  
+    <aside class="tuner__radio">
+  <h3>Radio input</h3>
+
+  
+    <div class="container">
+      <input class="radio" type="radio" name="blend" value="multiply"  checked="checked" >
+      <span class="label">multiply</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="blend" value="darken" >
+      <span class="label">darken</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="blend" value="lighten" >
+      <span class="label">lighten</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="blend" value="screen" >
+      <span class="label">screen</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="blend" value="overlay" >
+      <span class="label">overlay</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="blend" value="burn" >
+      <span class="label">burn</span>
+    </div>
+  
+    <div class="container">
+      <input class="radio" type="radio" name="blend" value="dogde" >
+      <span class="label">dogde</span>
+    </div>
+  
+</aside>
+
+  
 </aside>
 
   
@@ -533,12 +688,13 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 
-
-    <script src="/assets/scripts/spectrum.js"></script>
-  
     <script src="/assets/scripts/chroma.min.js"></script>
   
     <script src="/assets/scripts/d3.min.js"></script>
+  
+    <script src="/assets/scripts/spectrum.js"></script>
+  
+    <script src="/assets/scripts/jquery.knob.min.js"></script>
   
     <script src="/assets/scripts/site.min.js"></script>
   

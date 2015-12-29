@@ -1,0 +1,11 @@
+@mixin tuner__picker {
+  // Fixing the color picker
+  .sp-picker-container, .sp-palette-container {
+    float: right !important;
+  }
+
+  .sp-picker-container,
+  .sp-input-container {
+    width: 300px !important;
+  }
+}

@@ -2,11 +2,9 @@
   <h3>Radio input</h3>
 
   {% for item in tuner.radio %}
-    {% if loop.index == 1 %}
-      {% set checked = "checked" %}
-    {% else %}
-      {% set checked = "" %}
-    {% endif %}
-    <input class="radio" type="radio" name="{{ tuner.name | lower }}" value="{{ item }}" checked="{{ checked }}">{{ item }}
+    <div class="container">
+      <input class="radio" type="radio" name="{{ tuner.name | lower }}" value="{{ item }}" {% if loop.first %} checked="checked" {% endif %}>
+      <span class="label">{{ item }}</span>
+    </div>
   {% endfor %}
 </aside>

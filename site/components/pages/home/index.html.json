@@ -22,24 +22,32 @@
   ],
   "tuners": [
     {
-      "name": "Tint",
-      "description": "Lighten / Brightness / Add white",
+      "name": "Lighten",
       "value": "#ffffff",
       "start": "0",
+      "end": "100",
       "disabled": true
     },
     {
-      "name": "Shade",
-      "description": "Darken / Add black",
+      "name": "Darken",
       "value": "#000000",
       "start": "0",
+      "end": "100",
       "disabled": true
     },
     {
-      "name": "Tone",
+      "name": "Saturate",
       "description": "Saturation / Intensity / Add gray",
       "value": "#cccccc",
-      "start": "50",
+      "start": "0",
+      "end": "100",
+      "disabled": true
+    },
+    {
+      "name": "Desaturate",
+      "value": "#cccccc",
+      "start": "0",
+      "end": "100",
       "disabled": true
     },
     {
@@ -47,6 +55,7 @@
       "description": "Set luminosity",
       "value": "#cc99cc",
       "start": "0",
+      "end": "100",
       "hidden": true,
       "radio": [
         "rgb", "hsl", "hsv", "hsi", "lab", "lch", "hcl"
@@ -57,6 +66,7 @@
       "description": "Mix colors",
       "value": "#cc99cc",
       "start": "0",
+      "end": "100",
       "radio": [
         "rgb", "hsl", "hsv", "hsi", "lab", "lch", "hcl"
       ]
@@ -66,6 +76,7 @@
       "description": "Blend colors",
       "value": "3c990c",
       "start": "0",
+      "end": "100",
       "radio": [
         "multiply", "darken", "lighten", "screen", "overlay", "burn", "dogde"
       ]
