@@ -64,19 +64,16 @@ function colorsNewPalette(colors, colorModel) {
 
 
 // Return the primary colors for a given color model
-function primaryColorsFromModel(colorModel) {
-  switch (colorModel) {
+function primaryColors(colorPrimaries) {
+  switch (colorPrimaries) {
     case 'ryb':
-    case 'hsl':
-    case 'hsv':
-    case 'hsi':
-    case 'lab':
-    case 'lch':
-    case 'hcl':
       return ["#00f", "#ff0", "#f00"];
       break;
     case 'rgb':
       return ["#00f", "#0f0", "#f00"];
+      break;
+    case 'cmyk':
+      return ["cyan", "magenta", "yellow"];
       break;
   }
 }
@@ -84,9 +81,9 @@ function primaryColorsFromModel(colorModel) {
 
 
 // Generate a color for a slice
-function generateSliceColor(sliceIndex, index, colorModel) {
+function generateSliceColor(sliceIndex, index, colorModel, colorPrimaries) {
   var model = document.querySelector('.color-wheel__controls .color-model').value;
-  var colors = primaryColorsFromModel(colorModel);
+  var colors = primaryColors(colorPrimaries);
 
   if (index == 1) {
     return chroma(colors[sliceIndex]);
@@ -104,7 +101,7 @@ function generateSliceColor(sliceIndex, index, colorModel) {
 
 // Generate a single wheel with D3.js
 // - http://zeroviscosity.com/d3-js-step-by-step/step-1-a-basic-pie-chart
-var createColorWheel = function(circleID, dataset, index, colorModel) {
+var createColorWheel = function(circleID, dataset, index, colorModel, colorPrimaries) {
   'use strict';
 
   var width = index * sliceWidth;
@@ -134,7 +131,7 @@ var createColorWheel = function(circleID, dataset, index, colorModel) {
     .attr('class', 'slice')
     .attr('d', arc)
     .attr('fill', function(d, i) {
-      return generateSliceColor(i, index, colorModel);
+      return generateSliceColor(i, index, colorModel, colorPrimaries);
     });
 };
 
@@ -156,19 +153,19 @@ var colorWheel = function(colorWheelID) {
   // Draw wheels
   for (var i = 0; i < wheels.length; i++) {
     createColorWheelDiv(i + 1, wheels.length + 1);
-    drawColorWheel(i + 1, wheels[i], colorModel);
+    drawColorWheel(i + 1, wheels[i], colorModel, colorPrimaries);
   }
 
 
   // Prepare dataset and draw a wheel
-  function drawColorWheel(index, slices, colorModel) {
+  function drawColorWheel(index, slices, colorModel, colorPrimaries) {
     var dataset = [];
 
     for (var i = 0; i < slices; i++) {
       dataset.push({ label: 'label' + i, count: 10 });
     }
 
-    createColorWheel('.wheel--' + index, dataset, index, colorModel);
+    createColorWheel('.wheel--' + index, dataset, index, colorModel, colorPrimaries);
   }
 
 

@@ -1,7 +1,6 @@
 // Click on a slice on a wheel & pick it's color
-var clickColorWheel = function(wheelID) {
-  var wheel = document.querySelector(wheelID);
-  var slices = wheel.querySelectorAll('.slice');
+var clickOnColorSlice = function(slicesID) {
+  var slices = document.querySelectorAll(slicesID);
 
   for (i = 0; i < slices.length; i++) {
     slices[i].addEventListener('click', click, false);
@@ -16,5 +15,5 @@ var clickColorWheel = function(wheelID) {
 
 // Attach click to wheels
 window.onload = function(e) {
-  clickOnColorWheel('.color-wheel .wheel .svg');
+  clickOnColorSlice('.color-wheel .wheel .svg .slice');
 }
