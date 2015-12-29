@@ -8,10 +8,12 @@
     order: 2;
   }
 
+
   &__radio {
     @include tuner__radio;
     order: 3;
   }
 
+  @include knob;
   @include tuner__picker;
 }

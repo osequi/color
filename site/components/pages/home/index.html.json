@@ -37,7 +37,6 @@
     },
     {
       "name": "Saturate",
-      "description": "Saturation / Intensity / Add gray",
       "value": "#cccccc",
       "start": "0",
       "end": "100",
@@ -52,8 +51,8 @@
     },
     {
       "name": "Luminance",
-      "description": "Set luminosity",
-      "value": "#cc99cc",
+      "value": "#FFFFE5",
+      "picker": "yes",
       "start": "0",
       "end": "100",
       "hidden": true,
@@ -63,8 +62,8 @@
     },
     {
       "name": "Mix",
-      "description": "Mix colors",
-      "value": "#cc99cc",
+      "value": "#FFE5FF",
+      "picker": "yes",
       "start": "0",
       "end": "100",
       "radio": [
@@ -73,8 +72,8 @@
     },
     {
       "name": "Blend",
-      "description": "Blend colors",
-      "value": "3c990c",
+      "value": "#FFEDE5",
+      "picker": "yes",
       "start": "0",
       "end": "100",
       "radio": [

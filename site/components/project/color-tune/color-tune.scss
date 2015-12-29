@@ -6,9 +6,5 @@
 
   .tuner {
     @include tuner;
-
-    &:nth-last-of-type(1) {
-      flex-basis: 45%;
-    }
   }
 }

@@ -1,4 +1,4 @@
-$('.tuner .tuner__colorpicker').spectrum({
+$('.tuner .tuner__picker').spectrum({
   showInput: true,
   showAlpha: true,
   showInitial: true,
