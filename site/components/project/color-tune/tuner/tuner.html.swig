@@ -8,7 +8,7 @@
     <input class="tuner__picker tuner__picker--{{ tuner.name | lower }}" type="text" value="{{ tuner.value }}">
   {% endif %}
 
-  {% if tuner.radio %}
-    {% include '__radio/tuner__radio.html.swig' %}
+  {% if tuner.modes %}
+    {% include '__modes/tuner__modes.html.swig' %}
   {% endif %}
 </aside>

@@ -1,17 +1,26 @@
 @mixin tuner {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  // The knob
+  div {
+    &:first-of-type {
+      display: inline-flex;
+      flex-basis: 100%;
+    }
+  }
 
   &__title {
     display: flex;
-    order: 2;
+    flex-basis: 51%;
+    justify-content: center;
+    order: 3;
   }
 
-
-  &__radio {
-    @include tuner__radio;
-    order: 3;
+  &__modes {
+    @include tuner__modes;
   }
 
   @include knob;

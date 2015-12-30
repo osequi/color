@@ -1,6 +1,7 @@
 @mixin tuner__picker {
   .sp-replacer {
-    margin: $lem / 4 0;
+    margin: $lem / 4;
+    height: 25px;
   }
 
   // Fixing the color picker
