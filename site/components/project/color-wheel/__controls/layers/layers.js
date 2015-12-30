@@ -4,6 +4,11 @@ var createLayerNavigation = function(layersID) {
   for (var i=0; i < wheels.length; i++) {
     var layer = document.createElement('span');
     layer.setAttribute('class', 'layer');
+
+    if (i == wheels.length - 1) {
+      layer.setAttribute('class', 'layer layer--selected');
+    }
+
     layer.setAttribute('data-index', wheels.length - i - 1);
     layer.innerHTML = (i + 1);
     layers.appendChild(layer);
