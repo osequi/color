@@ -4,17 +4,11 @@
   padding: $lem;
 
   position: relative;
+  cursor: pointer;
+  border: 1px solid transparent;
 
   &__name {
     @include color-swatch__name;
-  }
-
-  &__value {
-    @include color-swatch__value;
-  }
-
-  &__button {
-    @include color-swatch__button;
   }
 
   &__pick {
@@ -33,8 +27,8 @@
     border: 1px solid;
   }
 
-  &.dark,
-  &.highlight,
+  &.dark .color-swatch__name,
+  &.highlight .color-swatch__name,
   &.highlight .color-swatch__pick {
     color: $light;
   }

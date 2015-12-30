@@ -1,4 +1,6 @@
 @mixin color-swatch--active {
+  @include box-shadow;
+  
   .color-swatch__pick {
     display: flex;
   }
